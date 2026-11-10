@@ -1,0 +1,588 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Executive Kinetic Glass",
+          "styleGuidelines": "## Brand & Style\n\nThis design system targets C-suite stakeholders, enterprise leaders, and elite technologists seeking institutional-grade consulting, AI transformation, and digital intelligence. The brand aesthetic merges the authoritative gravity of tier-one strategic management with the tactical precision of advanced deep-tech infrastructure.\n\nThe interface evokes strategic clarity, computational power, absolute reliability, and forward-looking momentum. Visual styling combines **Refined Glassmorphism** with **Technical Minimalism**:\n- Dark-mode-first deep spatial surfaces establish an immersive, high-focus canvas.\n- Crisp, luminous accents in emerald and sapphire signal technological vitality and analytical precision.\n- Subtle inner glows, micron-thin translucent borders, and calibrated backdrop filters simulate multi-layered optic glass panels over deep space.\n- Zero ornamental clutter; every line, metric badge, and surface serves immediate executive comprehension.\n\n## Layout & Spacing\n\nThe design system employs a **12-column responsive fluid grid** with an intentional ceiling maximum container width of `1440px` for optimal executive dashboard visibility.\n\n- **Breakpoints & Layout Adaptations**:\n  - **Desktop (1280px+)**: 12 columns with 32px gutters and 48px margins. Multi-pane operations, persistent executive side-rails, and side-by-side comparative matrices.\n  - **Tablet (768px – 1279px)**: 8 columns with 24px gutters and 32px margins. Secondary telemetry panels collapse into expandable sliding sheets or drawers.\n  - **Mobile (Below 768px)**: 4 columns with 16px gutters and 20px margins. Multi-metric grids collapse into single-column vertical stacks with horizontal swipeable micro-cards for KPI strips.\n\n- **Spacing Rhythm**: Rooted in a strict 4px base increment. Padding inside components alternates predictably between `space-md` (16px) for compact toolbars and `space-lg` (24px) for expansive analytical cards.\n\n## Elevation & Depth\n\nDepth is conveyed through a synergy of **Translucent Glassmorphism**, **Tonal Tiering**, and **Subtle Chromatic Luminescence** rather than traditional opaque drop shadows.\n\n1. **Surface 0 (Deep Ground)**:\n   - Color: `#0B0F17`. Absolute base canvas.\n\n2. **Surface 1 (Structural Sections & Sidebars)**:\n   - Color: `#0F172A`. Creates subtle visual partitions without explicit dividing borders.\n\n3. **Surface 2 (Glassmorphic Analytical Cards & Panels)**:\n   - Background: `rgba(17, 24, 39, 0.7)`.\n   - Backdrop Filter: `blur(16px) saturate(180%)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.08)`.\n   - Shadow: `0 8px 32px 0 rgba(0, 0, 0, 0.37)`, with a top inset highlight of `inset 0 1px 0 0 rgba(255, 255, 255, 0.05)`.\n\n4. **Surface 3 (Overlays, Modals, Executive Action Trays)**:\n   - Background: `rgba(15, 23, 42, 0.88)`.\n   - Backdrop Filter: `blur(24px)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.12)`.\n   - Shadow: `0 20px 48px -8px rgba(0, 0, 0, 0.6)`.\n\n5. **Luminescent Aura (Interactive Accent Depth)**:\n   - For primary cards under hover or key status indicators, cast a radial ambient glow: `0 0 28px -4px rgba(16, 185, 129, 0.15)` or `0 0 28px -4px rgba(59, 130, 246, 0.15)`.\n\n## Components\n\n### Buttons\n- **Primary Executive**: Radial gradient fill `linear-gradient(135deg, #10B981 0%, #14B8A6 100%)`, text `#0B0F17` (weight: 600), border: none, subtle shadow: `0 0 20px rgba(16, 185, 129, 0.25)`. On hover: brightness boost (1.05) and light vertical rise.\n- **Secondary (Glass)**: Background `rgba(255, 255, 255, 0.04)`, text `#F8FAFC`, border: `1px solid rgba(255, 255, 255, 0.08)`. On hover: `rgba(255, 255, 255, 0.08)` fill and `rgba(255, 255, 255, 0.18)` border.\n- **Ghost Action**: Transparent background, text `#94A3B8`. Hover converts text to `#10B981` or `#3B82F6` with zero container shift.\n\n### Precision Metric Badges & Chips\n- Structure: Micro-pill shape (`9999px`), internal padding `0.25rem 0.625rem`.\n- **Status (Emerald/Alpha)**: Background `rgba(16, 185, 129, 0.12)`, text `#10B981`, border `1px solid rgba(16, 185, 129, 0.25)`. Features a 6px pulsing emerald beacon dot.\n- **Strategic Category**: Background `rgba(59, 130, 246, 0.1)`, text `#60A5FA`, border `1px solid rgba(59, 130, 246, 0.2)`.\n\n### Cards & Analytic Tiles\n- Glassmorphic container with `rgba(17, 24, 39, 0.65)` fill, `backdrop-filter: blur(16px)`, and `1px solid rgba(255, 255, 255, 0.08)`.\n- Internal layout includes an upper eyebrow label, prominent `label-metric` KPI, comparison trend indicator, and a bottom micro-sparkline or metadata strip.\n\n### Form Inputs & Selectors\n- Background `rgba(11, 15, 23, 0.6)`, border `1px solid rgba(255, 255, 255, 0.1)`. Height: 44px. Text: `#F8FAFC`. Placeholder: `#64748B`.\n- Focused state: Border transitions to `#06B6D4` with an outer glow `0 0 0 3px rgba(6, 182, 212, 0.2)`.\n\n### Checkboxes & Radios\n- Box size: 18px x 18px. Fill: `rgba(15, 23, 42, 0.8)`. Border: `1px solid rgba(255, 255, 255, 0.2)`.\n- Checked: Fill `#10B981`, border `#10B981`, with crisp white SVG check icon.\n\n### Executive KPI Strip\n- A specialized multi-segment horizontal bar separating quarterly velocity, capital allocation, and risk indexes using subtle `1px` vertical separators (`rgba(255, 255, 255, 0.06)`).",
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#10b981",
+            "designMd": "---\nname: Executive Kinetic Glass\ncolors:\n  surface: '#0f131c'\n  surface-dim: '#0f131c'\n  surface-bright: '#353942'\n  surface-container-lowest: '#0a0e16'\n  surface-container-low: '#181c24'\n  surface-container: '#1c2028'\n  surface-container-high: '#262a33'\n  surface-container-highest: '#31353e'\n  on-surface: '#dfe2ee'\n  on-surface-variant: '#bbcabf'\n  inverse-surface: '#dfe2ee'\n  inverse-on-surface: '#2c3039'\n  outline: '#86948a'\n  outline-variant: '#3c4a42'\n  surface-tint: '#4edea3'\n  primary: '#4edea3'\n  on-primary: '#003824'\n  primary-container: '#10b981'\n  on-primary-container: '#00422b'\n  inverse-primary: '#006c49'\n  secondary: '#adc6ff'\n  on-secondary: '#002e6a'\n  secondary-container: '#0566d9'\n  on-secondary-container: '#e6ecff'\n  tertiary: '#4cd7f6'\n  on-tertiary: '#003640'\n  tertiary-container: '#00b2d0'\n  on-tertiary-container: '#003f4b'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#6ffbbe'\n  primary-fixed-dim: '#4edea3'\n  on-primary-fixed: '#002113'\n  on-primary-fixed-variant: '#005236'\n  secondary-fixed: '#d8e2ff'\n  secondary-fixed-dim: '#adc6ff'\n  on-secondary-fixed: '#001a42'\n  on-secondary-fixed-variant: '#004395'\n  tertiary-fixed: '#acedff'\n  tertiary-fixed-dim: '#4cd7f6'\n  on-tertiary-fixed: '#001f26'\n  on-tertiary-fixed-variant: '#004e5c'\n  background: '#0f131c'\n  on-background: '#dfe2ee'\n  surface-variant: '#31353e'\ntypography:\n  display-hero:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.03em\n  display-hero-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: -0.005em\n  body-md:\n    fontFamily: Inter\n    fontSize: 15px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-sm:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  label-lg:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-metric:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 38px\n    letterSpacing: -0.02em\n  label-code:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.06em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  margin: 2rem\n  gutter-desktop: 2rem\n  margin-desktop: 3rem\n  gutter-mobile: 1rem\n  margin-mobile: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\n\nThis design system targets C-suite stakeholders, enterprise leaders, and elite technologists seeking institutional-grade consulting, AI transformation, and digital intelligence. The brand aesthetic merges the authoritative gravity of tier-one strategic management with the tactical precision of advanced deep-tech infrastructure.\n\nThe interface evokes strategic clarity, computational power, absolute reliability, and forward-looking momentum. Visual styling combines **Refined Glassmorphism** with **Technical Minimalism**:\n- Dark-mode-first deep spatial surfaces establish an immersive, high-focus canvas.\n- Crisp, luminous accents in emerald and sapphire signal technological vitality and analytical precision.\n- Subtle inner glows, micron-thin translucent borders, and calibrated backdrop filters simulate multi-layered optic glass panels over deep space.\n- Zero ornamental clutter; every line, metric badge, and surface serves immediate executive comprehension.\n\n## Colors\n\nThe palette is engineered around dark spatial depth, accented by surgical radiant highlights:\n\n- **Base Canvas & Canvas Layers**:\n  - `surface-base`: `#0B0F17` (Deep Obsidian Void — root canvas)\n  - `surface-raised`: `#0F172A` (Midnight Navy — secondary canvas & sidebars)\n  - `surface-elevated`: `#111827` (Deep Slate — layered cards & floating surfaces)\n  - `surface-glass`: `rgba(15, 23, 42, 0.65)` (Translucent container overlay)\n\n- **Accents & Luminescence**:\n  - `accent-emerald-primary`: `#10B981` (Strategic validation, positive alpha, core brand identity)\n  - `accent-teal`: `#14B8A6` (Secondary telemetry & gradient transitions)\n  - `accent-sapphire`: `#3B82F6` (Computational intelligence, institutional stability)\n  - `accent-cyan`: `#06B6D4` (Active interaction, system signals, focus rings)\n\n- **Borders & Dividers**:\n  - `border-glass-default`: `rgba(255, 255, 255, 0.08)`\n  - `border-glass-hover`: `rgba(255, 255, 255, 0.16)`\n  - `border-glass-accent`: `rgba(16, 185, 129, 0.35)`\n\n- **Typography & Text Contrast**:\n  - `text-primary`: `#F8FAFC` (100% white-slate for headlines and key KPIs)\n  - `text-secondary`: `#94A3B8` (Slate-400 for structural text, explanations, and metadata)\n  - `text-tertiary`: `#64748B` (Slate-500 for captions, timestamps, and subtle hints)\n\n## Typography\n\nThe type scale integrates **Plus Jakarta Sans** for commanding headlines and analytical KPI callouts, complemented by **Inter** for dense data presentation, UI labels, and long-form narrative text.\n\n- **Display & Headlines**: Strict negative letter-spacing generates an editorial, premium feel without compromising legibility. Line heights remain tight to support stacked executive summaries and multi-column dashboards.\n- **Body Text**: Tuned for prolonged cognitive processing on emissive OLED and LED displays. Line lengths must strictly conform between 58 and 72 characters per line for executive briefs.\n- **Metric Badges & Telemetry**: Quantitative values utilize `label-metric` with tabular numerals enabled (`font-variant-numeric: tabular-nums`) to prevent horizontal jitter during real-time data streaming.\n\n## Layout & Spacing\n\nThe design system employs a **12-column responsive fluid grid** with an intentional ceiling maximum container width of `1440px` for optimal executive dashboard visibility.\n\n- **Breakpoints & Layout Adaptations**:\n  - **Desktop (1280px+)**: 12 columns with 32px gutters and 48px margins. Multi-pane operations, persistent executive side-rails, and side-by-side comparative matrices.\n  - **Tablet (768px – 1279px)**: 8 columns with 24px gutters and 32px margins. Secondary telemetry panels collapse into expandable sliding sheets or drawers.\n  - **Mobile (Below 768px)**: 4 columns with 16px gutters and 20px margins. Multi-metric grids collapse into single-column vertical stacks with horizontal swipeable micro-cards for KPI strips.\n\n- **Spacing Rhythm**: Rooted in a strict 4px base increment. Padding inside components alternates predictably between `space-md` (16px) for compact toolbars and `space-lg` (24px) for expansive analytical cards.\n\n## Elevation & Depth\n\nDepth is conveyed through a synergy of **Translucent Glassmorphism**, **Tonal Tiering**, and **Subtle Chromatic Luminescence** rather than traditional opaque drop shadows.\n\n1. **Surface 0 (Deep Ground)**:\n   - Color: `#0B0F17`. Absolute base canvas.\n\n2. **Surface 1 (Structural Sections & Sidebars)**:\n   - Color: `#0F172A`. Creates subtle visual partitions without explicit dividing borders.\n\n3. **Surface 2 (Glassmorphic Analytical Cards & Panels)**:\n   - Background: `rgba(17, 24, 39, 0.7)`.\n   - Backdrop Filter: `blur(16px) saturate(180%)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.08)`.\n   - Shadow: `0 8px 32px 0 rgba(0, 0, 0, 0.37)`, with a top inset highlight of `inset 0 1px 0 0 rgba(255, 255, 255, 0.05)`.\n\n4. **Surface 3 (Overlays, Modals, Executive Action Trays)**:\n   - Background: `rgba(15, 23, 42, 0.88)`.\n   - Backdrop Filter: `blur(24px)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.12)`.\n   - Shadow: `0 20px 48px -8px rgba(0, 0, 0, 0.6)`.\n\n5. **Luminescent Aura (Interactive Accent Depth)**:\n   - For primary cards under hover or key status indicators, cast a radial ambient glow: `0 0 28px -4px rgba(16, 185, 129, 0.15)` or `0 0 28px -4px rgba(59, 130, 246, 0.15)`.\n\n## Shapes\n\nThe design system standardizes on **Rounded (Level 2)** geometry to achieve an architectural balance between clinical enterprise rigor and modern technological fluidity.\n\n- **Base Elements (Buttons, Inputs, Badges, Tabs)**: `0.5rem` (8px). Delivers a crisp, modern corner radius.\n- **Mid-Tier Modules (Cards, Metrics Panels, Dropdowns)**: `rounded-lg` at `1rem` (16px). Softens larger surface perimeters while maintaining structural discipline.\n- **Top-Tier Containers (Executive Modals, Slide-Out Drawers)**: `rounded-xl` at `1.5rem` (24px).\n- **Metric Pills & Status Indicators**: Fully rounded capsules (`9999px`) reserved strictly for compact inline statuses and numerical chips.\n\n## Components\n\n### Buttons\n- **Primary Executive**: Radial gradient fill `linear-gradient(135deg, #10B981 0%, #14B8A6 100%)`, text `#0B0F17` (weight: 600), border: none, subtle shadow: `0 0 20px rgba(16, 185, 129, 0.25)`. On hover: brightness boost (1.05) and light vertical rise.\n- **Secondary (Glass)**: Background `rgba(255, 255, 255, 0.04)`, text `#F8FAFC`, border: `1px solid rgba(255, 255, 255, 0.08)`. On hover: `rgba(255, 255, 255, 0.08)` fill and `rgba(255, 255, 255, 0.18)` border.\n- **Ghost Action**: Transparent background, text `#94A3B8`. Hover converts text to `#10B981` or `#3B82F6` with zero container shift.\n\n### Precision Metric Badges & Chips\n- Structure: Micro-pill shape (`9999px`), internal padding `0.25rem 0.625rem`.\n- **Status (Emerald/Alpha)**: Background `rgba(16, 185, 129, 0.12)`, text `#10B981`, border `1px solid rgba(16, 185, 129, 0.25)`. Features a 6px pulsing emerald beacon dot.\n- **Strategic Category**: Background `rgba(59, 130, 246, 0.1)`, text `#60A5FA`, border `1px solid rgba(59, 130, 246, 0.2)`.\n\n### Cards & Analytic Tiles\n- Glassmorphic container with `rgba(17, 24, 39, 0.65)` fill, `backdrop-filter: blur(16px)`, and `1px solid rgba(255, 255, 255, 0.08)`.\n- Internal layout includes an upper eyebrow label, prominent `label-metric` KPI, comparison trend indicator, and a bottom micro-sparkline or metadata strip.\n\n### Form Inputs & Selectors\n- Background `rgba(11, 15, 23, 0.6)`, border `1px solid rgba(255, 255, 255, 0.1)`. Height: 44px. Text: `#F8FAFC`. Placeholder: `#64748B`.\n- Focused state: Border transitions to `#06B6D4` with an outer glow `0 0 0 3px rgba(6, 182, 212, 0.2)`.\n\n### Checkboxes & Radios\n- Box size: 18px x 18px. Fill: `rgba(15, 23, 42, 0.8)`. Border: `1px solid rgba(255, 255, 255, 0.2)`.\n- Checked: Fill `#10B981`, border `#10B981`, with crisp white SVG check icon.\n\n### Executive KPI Strip\n- A specialized multi-segment horizontal bar separating quarterly velocity, capital allocation, and risk indexes using subtle `1px` vertical separators (`rgba(255, 255, 255, 0.06)`).",
+            "font": "PLUS_JAKARTA_SANS",
+            "headlineFont": "PLUS_JAKARTA_SANS",
+            "headlineFontFamily": "Plus Jakarta Sans",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#0f131c",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2c3039",
+              "inverse_primary": "#006c49",
+              "inverse_surface": "#dfe2ee",
+              "on_background": "#dfe2ee",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#003824",
+              "on_primary_container": "#00422b",
+              "on_primary_fixed": "#002113",
+              "on_primary_fixed_variant": "#005236",
+              "on_secondary": "#002e6a",
+              "on_secondary_container": "#e6ecff",
+              "on_secondary_fixed": "#001a42",
+              "on_secondary_fixed_variant": "#004395",
+              "on_surface": "#dfe2ee",
+              "on_surface_variant": "#bbcabf",
+              "on_tertiary": "#003640",
+              "on_tertiary_container": "#003f4b",
+              "on_tertiary_fixed": "#001f26",
+              "on_tertiary_fixed_variant": "#004e5c",
+              "outline": "#86948a",
+              "outline_variant": "#3c4a42",
+              "primary": "#4edea3",
+              "primary_container": "#10b981",
+              "primary_fixed": "#6ffbbe",
+              "primary_fixed_dim": "#4edea3",
+              "secondary": "#adc6ff",
+              "secondary_container": "#0566d9",
+              "secondary_fixed": "#d8e2ff",
+              "secondary_fixed_dim": "#adc6ff",
+              "surface": "#0f131c",
+              "surface_bright": "#353942",
+              "surface_container": "#1c2028",
+              "surface_container_high": "#262a33",
+              "surface_container_highest": "#31353e",
+              "surface_container_low": "#181c24",
+              "surface_container_lowest": "#0a0e16",
+              "surface_dim": "#0f131c",
+              "surface_tint": "#4edea3",
+              "surface_variant": "#31353e",
+              "tertiary": "#4cd7f6",
+              "tertiary_container": "#00b2d0",
+              "tertiary_fixed": "#acedff",
+              "tertiary_fixed_dim": "#4cd7f6"
+            },
+            "overrideNeutralColor": "#0b0f17",
+            "overridePrimaryColor": "#10b981",
+            "overrideSecondaryColor": "#3b82f6",
+            "overrideTertiaryColor": "#06b6d4",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "gutter": "1.5rem",
+              "gutter-desktop": "2rem",
+              "gutter-mobile": "1rem",
+              "margin": "2rem",
+              "margin-desktop": "3rem",
+              "margin-mobile": "1.25rem",
+              "space-lg": "1.5rem",
+              "space-md": "1rem",
+              "space-sm": "0.5rem",
+              "space-xl": "2.5rem",
+              "space-xs": "0.25rem"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.005em",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "15px",
+                "fontWeight": "400",
+                "letterSpacing": "0em",
+                "lineHeight": "24px"
+              },
+              "body-sm": {
+                "fontFamily": "Inter",
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "letterSpacing": "0em",
+                "lineHeight": "20px"
+              },
+              "display-hero": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "56px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.03em",
+                "lineHeight": "64px"
+              },
+              "display-hero-mobile": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "44px"
+              },
+              "headline-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "36px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "44px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "36px"
+              },
+              "headline-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "32px"
+              },
+              "headline-sm": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "20px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "28px"
+              },
+              "label-code": {
+                "fontFamily": "Inter",
+                "fontSize": "11px",
+                "fontWeight": "500",
+                "letterSpacing": "0.06em",
+                "lineHeight": "16px"
+              },
+              "label-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.01em",
+                "lineHeight": "20px"
+              },
+              "label-md": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.02em",
+                "lineHeight": "16px"
+              },
+              "label-metric": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "38px"
+              }
+            }
+          }
+        },
+        "name": "assets/09d311daa714460cbf6e513bdf7c6739",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Executive Kinetic Glass",
+                "styleGuidelines": "## Brand & Style\n\nThis design system targets C-suite stakeholders, enterprise leaders, and elite technologists seeking institutional-grade consulting, AI transformation, and digital intelligence. The brand aesthetic merges the authoritative gravity of tier-one strategic management with the tactical precision of advanced deep-tech infrastructure.\n\nThe interface evokes strategic clarity, computational power, absolute reliability, and forward-looking momentum. Visual styling combines **Refined Glassmorphism** with **Technical Minimalism**:\n- Dark-mode-first deep spatial surfaces establish an immersive, high-focus canvas.\n- Crisp, luminous accents in emerald and sapphire signal technological vitality and analytical precision.\n- Subtle inner glows, micron-thin translucent borders, and calibrated backdrop filters simulate multi-layered optic glass panels over deep space.\n- Zero ornamental clutter; every line, metric badge, and surface serves immediate executive comprehension.\n\n## Layout & Spacing\n\nThe design system employs a **12-column responsive fluid grid** with an intentional ceiling maximum container width of `1440px` for optimal executive dashboard visibility.\n\n- **Breakpoints & Layout Adaptations**:\n  - **Desktop (1280px+)**: 12 columns with 32px gutters and 48px margins. Multi-pane operations, persistent executive side-rails, and side-by-side comparative matrices.\n  - **Tablet (768px – 1279px)**: 8 columns with 24px gutters and 32px margins. Secondary telemetry panels collapse into expandable sliding sheets or drawers.\n  - **Mobile (Below 768px)**: 4 columns with 16px gutters and 20px margins. Multi-metric grids collapse into single-column vertical stacks with horizontal swipeable micro-cards for KPI strips.\n\n- **Spacing Rhythm**: Rooted in a strict 4px base increment. Padding inside components alternates predictably between `space-md` (16px) for compact toolbars and `space-lg` (24px) for expansive analytical cards.\n\n## Elevation & Depth\n\nDepth is conveyed through a synergy of **Translucent Glassmorphism**, **Tonal Tiering**, and **Subtle Chromatic Luminescence** rather than traditional opaque drop shadows.\n\n1. **Surface 0 (Deep Ground)**:\n   - Color: `#0B0F17`. Absolute base canvas.\n\n2. **Surface 1 (Structural Sections & Sidebars)**:\n   - Color: `#0F172A`. Creates subtle visual partitions without explicit dividing borders.\n\n3. **Surface 2 (Glassmorphic Analytical Cards & Panels)**:\n   - Background: `rgba(17, 24, 39, 0.7)`.\n   - Backdrop Filter: `blur(16px) saturate(180%)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.08)`.\n   - Shadow: `0 8px 32px 0 rgba(0, 0, 0, 0.37)`, with a top inset highlight of `inset 0 1px 0 0 rgba(255, 255, 255, 0.05)`.\n\n4. **Surface 3 (Overlays, Modals, Executive Action Trays)**:\n   - Background: `rgba(15, 23, 42, 0.88)`.\n   - Backdrop Filter: `blur(24px)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.12)`.\n   - Shadow: `0 20px 48px -8px rgba(0, 0, 0, 0.6)`.\n\n5. **Luminescent Aura (Interactive Accent Depth)**:\n   - For primary cards under hover or key status indicators, cast a radial ambient glow: `0 0 28px -4px rgba(16, 185, 129, 0.15)` or `0 0 28px -4px rgba(59, 130, 246, 0.15)`.\n\n## Components\n\n### Buttons\n- **Primary Executive**: Radial gradient fill `linear-gradient(135deg, #10B981 0%, #14B8A6 100%)`, text `#0B0F17` (weight: 600), border: none, subtle shadow: `0 0 20px rgba(16, 185, 129, 0.25)`. On hover: brightness boost (1.05) and light vertical rise.\n- **Secondary (Glass)**: Background `rgba(255, 255, 255, 0.04)`, text `#F8FAFC`, border: `1px solid rgba(255, 255, 255, 0.08)`. On hover: `rgba(255, 255, 255, 0.08)` fill and `rgba(255, 255, 255, 0.18)` border.\n- **Ghost Action**: Transparent background, text `#94A3B8`. Hover converts text to `#10B981` or `#3B82F6` with zero container shift.\n\n### Precision Metric Badges & Chips\n- Structure: Micro-pill shape (`9999px`), internal padding `0.25rem 0.625rem`.\n- **Status (Emerald/Alpha)**: Background `rgba(16, 185, 129, 0.12)`, text `#10B981`, border `1px solid rgba(16, 185, 129, 0.25)`. Features a 6px pulsing emerald beacon dot.\n- **Strategic Category**: Background `rgba(59, 130, 246, 0.1)`, text `#60A5FA`, border `1px solid rgba(59, 130, 246, 0.2)`.\n\n### Cards & Analytic Tiles\n- Glassmorphic container with `rgba(17, 24, 39, 0.65)` fill, `backdrop-filter: blur(16px)`, and `1px solid rgba(255, 255, 255, 0.08)`.\n- Internal layout includes an upper eyebrow label, prominent `label-metric` KPI, comparison trend indicator, and a bottom micro-sparkline or metadata strip.\n\n### Form Inputs & Selectors\n- Background `rgba(11, 15, 23, 0.6)`, border `1px solid rgba(255, 255, 255, 0.1)`. Height: 44px. Text: `#F8FAFC`. Placeholder: `#64748B`.\n- Focused state: Border transitions to `#06B6D4` with an outer glow `0 0 0 3px rgba(6, 182, 212, 0.2)`.\n\n### Checkboxes & Radios\n- Box size: 18px x 18px. Fill: `rgba(15, 23, 42, 0.8)`. Border: `1px solid rgba(255, 255, 255, 0.2)`.\n- Checked: Fill `#10B981`, border `#10B981`, with crisp white SVG check icon.\n\n### Executive KPI Strip\n- A specialized multi-segment horizontal bar separating quarterly velocity, capital allocation, and risk indexes using subtle `1px` vertical separators (`rgba(255, 255, 255, 0.06)`).",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#10b981",
+                  "designMd": "---\nname: Executive Kinetic Glass\ncolors:\n  surface: '#0f131c'\n  surface-dim: '#0f131c'\n  surface-bright: '#353942'\n  surface-container-lowest: '#0a0e16'\n  surface-container-low: '#181c24'\n  surface-container: '#1c2028'\n  surface-container-high: '#262a33'\n  surface-container-highest: '#31353e'\n  on-surface: '#dfe2ee'\n  on-surface-variant: '#bbcabf'\n  inverse-surface: '#dfe2ee'\n  inverse-on-surface: '#2c3039'\n  outline: '#86948a'\n  outline-variant: '#3c4a42'\n  surface-tint: '#4edea3'\n  primary: '#4edea3'\n  on-primary: '#003824'\n  primary-container: '#10b981'\n  on-primary-container: '#00422b'\n  inverse-primary: '#006c49'\n  secondary: '#adc6ff'\n  on-secondary: '#002e6a'\n  secondary-container: '#0566d9'\n  on-secondary-container: '#e6ecff'\n  tertiary: '#4cd7f6'\n  on-tertiary: '#003640'\n  tertiary-container: '#00b2d0'\n  on-tertiary-container: '#003f4b'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#6ffbbe'\n  primary-fixed-dim: '#4edea3'\n  on-primary-fixed: '#002113'\n  on-primary-fixed-variant: '#005236'\n  secondary-fixed: '#d8e2ff'\n  secondary-fixed-dim: '#adc6ff'\n  on-secondary-fixed: '#001a42'\n  on-secondary-fixed-variant: '#004395'\n  tertiary-fixed: '#acedff'\n  tertiary-fixed-dim: '#4cd7f6'\n  on-tertiary-fixed: '#001f26'\n  on-tertiary-fixed-variant: '#004e5c'\n  background: '#0f131c'\n  on-background: '#dfe2ee'\n  surface-variant: '#31353e'\ntypography:\n  display-hero:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.03em\n  display-hero-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: -0.005em\n  body-md:\n    fontFamily: Inter\n    fontSize: 15px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-sm:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  label-lg:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-metric:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 38px\n    letterSpacing: -0.02em\n  label-code:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.06em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  margin: 2rem\n  gutter-desktop: 2rem\n  margin-desktop: 3rem\n  gutter-mobile: 1rem\n  margin-mobile: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\n\nThis design system targets C-suite stakeholders, enterprise leaders, and elite technologists seeking institutional-grade consulting, AI transformation, and digital intelligence. The brand aesthetic merges the authoritative gravity of tier-one strategic management with the tactical precision of advanced deep-tech infrastructure.\n\nThe interface evokes strategic clarity, computational power, absolute reliability, and forward-looking momentum. Visual styling combines **Refined Glassmorphism** with **Technical Minimalism**:\n- Dark-mode-first deep spatial surfaces establish an immersive, high-focus canvas.\n- Crisp, luminous accents in emerald and sapphire signal technological vitality and analytical precision.\n- Subtle inner glows, micron-thin translucent borders, and calibrated backdrop filters simulate multi-layered optic glass panels over deep space.\n- Zero ornamental clutter; every line, metric badge, and surface serves immediate executive comprehension.\n\n## Colors\n\nThe palette is engineered around dark spatial depth, accented by surgical radiant highlights:\n\n- **Base Canvas & Canvas Layers**:\n  - `surface-base`: `#0B0F17` (Deep Obsidian Void — root canvas)\n  - `surface-raised`: `#0F172A` (Midnight Navy — secondary canvas & sidebars)\n  - `surface-elevated`: `#111827` (Deep Slate — layered cards & floating surfaces)\n  - `surface-glass`: `rgba(15, 23, 42, 0.65)` (Translucent container overlay)\n\n- **Accents & Luminescence**:\n  - `accent-emerald-primary`: `#10B981` (Strategic validation, positive alpha, core brand identity)\n  - `accent-teal`: `#14B8A6` (Secondary telemetry & gradient transitions)\n  - `accent-sapphire`: `#3B82F6` (Computational intelligence, institutional stability)\n  - `accent-cyan`: `#06B6D4` (Active interaction, system signals, focus rings)\n\n- **Borders & Dividers**:\n  - `border-glass-default`: `rgba(255, 255, 255, 0.08)`\n  - `border-glass-hover`: `rgba(255, 255, 255, 0.16)`\n  - `border-glass-accent`: `rgba(16, 185, 129, 0.35)`\n\n- **Typography & Text Contrast**:\n  - `text-primary`: `#F8FAFC` (100% white-slate for headlines and key KPIs)\n  - `text-secondary`: `#94A3B8` (Slate-400 for structural text, explanations, and metadata)\n  - `text-tertiary`: `#64748B` (Slate-500 for captions, timestamps, and subtle hints)\n\n## Typography\n\nThe type scale integrates **Plus Jakarta Sans** for commanding headlines and analytical KPI callouts, complemented by **Inter** for dense data presentation, UI labels, and long-form narrative text.\n\n- **Display & Headlines**: Strict negative letter-spacing generates an editorial, premium feel without compromising legibility. Line heights remain tight to support stacked executive summaries and multi-column dashboards.\n- **Body Text**: Tuned for prolonged cognitive processing on emissive OLED and LED displays. Line lengths must strictly conform between 58 and 72 characters per line for executive briefs.\n- **Metric Badges & Telemetry**: Quantitative values utilize `label-metric` with tabular numerals enabled (`font-variant-numeric: tabular-nums`) to prevent horizontal jitter during real-time data streaming.\n\n## Layout & Spacing\n\nThe design system employs a **12-column responsive fluid grid** with an intentional ceiling maximum container width of `1440px` for optimal executive dashboard visibility.\n\n- **Breakpoints & Layout Adaptations**:\n  - **Desktop (1280px+)**: 12 columns with 32px gutters and 48px margins. Multi-pane operations, persistent executive side-rails, and side-by-side comparative matrices.\n  - **Tablet (768px – 1279px)**: 8 columns with 24px gutters and 32px margins. Secondary telemetry panels collapse into expandable sliding sheets or drawers.\n  - **Mobile (Below 768px)**: 4 columns with 16px gutters and 20px margins. Multi-metric grids collapse into single-column vertical stacks with horizontal swipeable micro-cards for KPI strips.\n\n- **Spacing Rhythm**: Rooted in a strict 4px base increment. Padding inside components alternates predictably between `space-md` (16px) for compact toolbars and `space-lg` (24px) for expansive analytical cards.\n\n## Elevation & Depth\n\nDepth is conveyed through a synergy of **Translucent Glassmorphism**, **Tonal Tiering**, and **Subtle Chromatic Luminescence** rather than traditional opaque drop shadows.\n\n1. **Surface 0 (Deep Ground)**:\n   - Color: `#0B0F17`. Absolute base canvas.\n\n2. **Surface 1 (Structural Sections & Sidebars)**:\n   - Color: `#0F172A`. Creates subtle visual partitions without explicit dividing borders.\n\n3. **Surface 2 (Glassmorphic Analytical Cards & Panels)**:\n   - Background: `rgba(17, 24, 39, 0.7)`.\n   - Backdrop Filter: `blur(16px) saturate(180%)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.08)`.\n   - Shadow: `0 8px 32px 0 rgba(0, 0, 0, 0.37)`, with a top inset highlight of `inset 0 1px 0 0 rgba(255, 255, 255, 0.05)`.\n\n4. **Surface 3 (Overlays, Modals, Executive Action Trays)**:\n   - Background: `rgba(15, 23, 42, 0.88)`.\n   - Backdrop Filter: `blur(24px)`.\n   - Border: `1px solid rgba(255, 255, 255, 0.12)`.\n   - Shadow: `0 20px 48px -8px rgba(0, 0, 0, 0.6)`.\n\n5. **Luminescent Aura (Interactive Accent Depth)**:\n   - For primary cards under hover or key status indicators, cast a radial ambient glow: `0 0 28px -4px rgba(16, 185, 129, 0.15)` or `0 0 28px -4px rgba(59, 130, 246, 0.15)`.\n\n## Shapes\n\nThe design system standardizes on **Rounded (Level 2)** geometry to achieve an architectural balance between clinical enterprise rigor and modern technological fluidity.\n\n- **Base Elements (Buttons, Inputs, Badges, Tabs)**: `0.5rem` (8px). Delivers a crisp, modern corner radius.\n- **Mid-Tier Modules (Cards, Metrics Panels, Dropdowns)**: `rounded-lg` at `1rem` (16px). Softens larger surface perimeters while maintaining structural discipline.\n- **Top-Tier Containers (Executive Modals, Slide-Out Drawers)**: `rounded-xl` at `1.5rem` (24px).\n- **Metric Pills & Status Indicators**: Fully rounded capsules (`9999px`) reserved strictly for compact inline statuses and numerical chips.\n\n## Components\n\n### Buttons\n- **Primary Executive**: Radial gradient fill `linear-gradient(135deg, #10B981 0%, #14B8A6 100%)`, text `#0B0F17` (weight: 600), border: none, subtle shadow: `0 0 20px rgba(16, 185, 129, 0.25)`. On hover: brightness boost (1.05) and light vertical rise.\n- **Secondary (Glass)**: Background `rgba(255, 255, 255, 0.04)`, text `#F8FAFC`, border: `1px solid rgba(255, 255, 255, 0.08)`. On hover: `rgba(255, 255, 255, 0.08)` fill and `rgba(255, 255, 255, 0.18)` border.\n- **Ghost Action**: Transparent background, text `#94A3B8`. Hover converts text to `#10B981` or `#3B82F6` with zero container shift.\n\n### Precision Metric Badges & Chips\n- Structure: Micro-pill shape (`9999px`), internal padding `0.25rem 0.625rem`.\n- **Status (Emerald/Alpha)**: Background `rgba(16, 185, 129, 0.12)`, text `#10B981`, border `1px solid rgba(16, 185, 129, 0.25)`. Features a 6px pulsing emerald beacon dot.\n- **Strategic Category**: Background `rgba(59, 130, 246, 0.1)`, text `#60A5FA`, border `1px solid rgba(59, 130, 246, 0.2)`.\n\n### Cards & Analytic Tiles\n- Glassmorphic container with `rgba(17, 24, 39, 0.65)` fill, `backdrop-filter: blur(16px)`, and `1px solid rgba(255, 255, 255, 0.08)`.\n- Internal layout includes an upper eyebrow label, prominent `label-metric` KPI, comparison trend indicator, and a bottom micro-sparkline or metadata strip.\n\n### Form Inputs & Selectors\n- Background `rgba(11, 15, 23, 0.6)`, border `1px solid rgba(255, 255, 255, 0.1)`. Height: 44px. Text: `#F8FAFC`. Placeholder: `#64748B`.\n- Focused state: Border transitions to `#06B6D4` with an outer glow `0 0 0 3px rgba(6, 182, 212, 0.2)`.\n\n### Checkboxes & Radios\n- Box size: 18px x 18px. Fill: `rgba(15, 23, 42, 0.8)`. Border: `1px solid rgba(255, 255, 255, 0.2)`.\n- Checked: Fill `#10B981`, border `#10B981`, with crisp white SVG check icon.\n\n### Executive KPI Strip\n- A specialized multi-segment horizontal bar separating quarterly velocity, capital allocation, and risk indexes using subtle `1px` vertical separators (`rgba(255, 255, 255, 0.06)`).",
+                  "font": "PLUS_JAKARTA_SANS",
+                  "headlineFont": "PLUS_JAKARTA_SANS",
+                  "headlineFontFamily": "Plus Jakarta Sans",
+                  "labelFont": "INTER",
+                  "labelFontFamily": "Inter",
+                  "namedColors": {
+                    "background": "#0f131c",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2c3039",
+                    "inverse_primary": "#006c49",
+                    "inverse_surface": "#dfe2ee",
+                    "on_background": "#dfe2ee",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#003824",
+                    "on_primary_container": "#00422b",
+                    "on_primary_fixed": "#002113",
+                    "on_primary_fixed_variant": "#005236",
+                    "on_secondary": "#002e6a",
+                    "on_secondary_container": "#e6ecff",
+                    "on_secondary_fixed": "#001a42",
+                    "on_secondary_fixed_variant": "#004395",
+                    "on_surface": "#dfe2ee",
+                    "on_surface_variant": "#bbcabf",
+                    "on_tertiary": "#003640",
+                    "on_tertiary_container": "#003f4b",
+                    "on_tertiary_fixed": "#001f26",
+                    "on_tertiary_fixed_variant": "#004e5c",
+                    "outline": "#86948a",
+                    "outline_variant": "#3c4a42",
+                    "primary": "#4edea3",
+                    "primary_container": "#10b981",
+                    "primary_fixed": "#6ffbbe",
+                    "primary_fixed_dim": "#4edea3",
+                    "secondary": "#adc6ff",
+                    "secondary_container": "#0566d9",
+                    "secondary_fixed": "#d8e2ff",
+                    "secondary_fixed_dim": "#adc6ff",
+                    "surface": "#0f131c",
+                    "surface_bright": "#353942",
+                    "surface_container": "#1c2028",
+                    "surface_container_high": "#262a33",
+                    "surface_container_highest": "#31353e",
+                    "surface_container_low": "#181c24",
+                    "surface_container_lowest": "#0a0e16",
+                    "surface_dim": "#0f131c",
+                    "surface_tint": "#4edea3",
+                    "surface_variant": "#31353e",
+                    "tertiary": "#4cd7f6",
+                    "tertiary_container": "#00b2d0",
+                    "tertiary_fixed": "#acedff",
+                    "tertiary_fixed_dim": "#4cd7f6"
+                  },
+                  "overrideNeutralColor": "#0b0f17",
+                  "overridePrimaryColor": "#10b981",
+                  "overrideSecondaryColor": "#3b82f6",
+                  "overrideTertiaryColor": "#06b6d4",
+                  "roundness": "ROUND_EIGHT",
+                  "spacing": {
+                    "gutter": "1.5rem",
+                    "gutter-desktop": "2rem",
+                    "gutter-mobile": "1rem",
+                    "margin": "2rem",
+                    "margin-desktop": "3rem",
+                    "margin-mobile": "1.25rem",
+                    "space-lg": "1.5rem",
+                    "space-md": "1rem",
+                    "space-sm": "0.5rem",
+                    "space-xl": "2.5rem",
+                    "space-xs": "0.25rem"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.005em",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0em",
+                      "lineHeight": "24px"
+                    },
+                    "body-sm": {
+                      "fontFamily": "Inter",
+                      "fontSize": "13px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0em",
+                      "lineHeight": "20px"
+                    },
+                    "display-hero": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "56px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.03em",
+                      "lineHeight": "64px"
+                    },
+                    "display-hero-mobile": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "36px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "44px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "36px",
+                      "fontWeight": "600",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "44px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "28px",
+                      "fontWeight": "600",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "36px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "32px"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "20px",
+                      "fontWeight": "600",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "28px"
+                    },
+                    "label-code": {
+                      "fontFamily": "Inter",
+                      "fontSize": "11px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.06em",
+                      "lineHeight": "16px"
+                    },
+                    "label-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "20px"
+                    },
+                    "label-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "16px"
+                    },
+                    "label-metric": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "38px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/09d311daa714460cbf6e513bdf7c6739",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "11976",
+            "htmlCode": {
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/16508225471345425096/files/ed1b899c38434fc5acd7f177bc19d5ca:download",
+              "mimeType": "text/html",
+              "name": "projects/16508225471345425096/files/ed1b899c38434fc5acd7f177bc19d5ca"
+            },
+            "id": "4ac5369ee6bb4c2db2e929739aa070e3",
+            "name": "projects/16508225471345425096/screens/4ac5369ee6bb4c2db2e929739aa070e3",
+            "prompt": "Design a breathtaking, ultra-modern executive enterprise homepage for AARK Innovations (Enterprise Consulting for Oracle ERP, Data & AI, AWS, Azure, Databricks, Snowflake).\n\nAesthetic:\nExecutive, sophisticated dark mode with deep slate/midnight navy background (#0B0F17), subtle atmospheric glowing mesh gradients in emerald (#10B981, #059669), teal, and sapphire (#3B82F6), crisp borders (border-white/10), glassmorphic cards (backdrop-blur-xl bg-slate-900/60), precision micro-typography, glowing metric pills, and executive craftsmanship.\n\nInclude all requested sections seamlessly and comprehensively:\n\n1. Navigation Bar:\n- Logo: 'AARK Innovations' with sleek geometric monogram / kinetic accent.\n- Links: Practices, Ecosystem, Approach, ROI Calculator, FAQ.\n- Actions: 'Client Portal' subtle button and prominent 'Book Working Session' button with emerald glow border.\n\n2. Hero Section:\n- Top badge / location pill: 'Fort Mill, SC · Charlotte & Carolinas' with subtle live pulse dot indicator.\n- Dominant, authoritative headline: 'Enterprise systems that run your business, not the other way around.'\n- Subtitle: Highlighting senior-only consulting delivery, architect-level oversight across Oracle Cloud ERP, enterprise data platforms, and modern AI automation without junior staff churn.\n- Dual CTAs: Primary 'Book an Executive Working Session' (glowing emerald/teal button) and secondary 'Explore Practice Areas' / 'Calculate ROI'.\n- 4-Metric Glass Stat Bar:\n  * 20+ hrs / week returned per team\n  * 4–8 wks average time to production\n  * 15+ yrs senior architect experience\n  * 100% staff are principal consultants & senior engineers\n\n3. Supported Platforms & Technology Ecosystem:\n- Clean enterprise logo cards with verified platform badges & specialized architecture domains:\n  * Oracle (Cloud Infrastructure, NetSuite & ERP Cloud, E-Business Suite modernizations)\n  * AWS (Advanced Cloud Architecture, Bedrock, Serverless Data Lakes)\n  * Microsoft Azure (Fabric, Synapse, Enterprise OpenAI integration)\n  * Databricks (Lakehouse, Unity Catalog, Delta Live Tables)\n  * Snowflake (Cortex AI, Data Clean Rooms, Enterprise Data Warehousing)\n\n4. Three Pillars of Consulting Practices (Numbered Cards):\n- Card 01: 'Oracle ERP Services' - Financials & Supply Chain Modernization, Integration Cloud (OIC), Custom Extensions, Automated Reconciliation & Compliance.\n- Card 02: 'Data & AI Transformation' - Agentic AI Workflows, LLM Governance & Fine-tuning, Predictive Operations, Automated Document & Invoice Processing.\n- Card 03: 'Cloud & Data Platforms' - Multi-cloud Lakehouse Architecture, Real-time Streaming Pipelines, FinOps Cloud Cost Governance, Zero-Trust Infrastructure.\nEach with numbered accent tags (01, 02, 03), subtle colored icon glyphs, and key measurable business outcomes.\n\n5. Executive Narrative Section: 'The busywork is the bottleneck'\n- Visual contrast showing the difference between traditional fragmented consulting (bloated billable hours, junior staff, prolonged roadmaps) versus the AARK Precision Model (senior practitioners, rapid value delivery, automated data pipelines, continuous operational autonomy).\n\n6. Interactive ROI & Time Saved Calculator:\n- Interactive inputs with range sliders or buttons:\n  * Team Size (e.g. 5 to 100 professionals)\n  * Hours Lost to Manual Data/ERP Work per week (e.g. 2 to 20 hrs/person)\n  * Average Loaded Hourly Cost (e.g. $65 to $175/hr)\n- Real-time responsive visual outputs:\n  * Annual Cost Recoverable (e.g. $280,000+ / year)\n  * Cumulative Annual Hours Reclaimed (e.g. 3,840 hrs)\n  * Accelerated ROI Payback Timeline (< 90 Days)\n- Built with vanilla JS reactivity so dragging sliders updates numbers dynamically.\n\n7. Engagement Models Matrix:\n- Model 1: 'Project Delivery' (Fixed-scope, sprint-based architecture & production deployment with guaranteed deliverables)\n- Model 2: 'Advisory Sprint' (2-4 week diagnostic, architecture blueprint, readiness audit, and executive AI roadmap)\n- Model 3: 'Staff Augmentation / Embedded Advisory' (Dedicated fractional Enterprise Architects & Principal Engineers embedded in your internal team)\nEach model shows timeline, team profile, ideal enterprise scenario, and primary deliverable.\n\n8. Executive FAQ & Working Session Consultation Form:\n- Accordion FAQ with questions on senior consultant allocation, Oracle migration security, Charlotte & Carolinas regional on-site capability, and timeline to value.\n- Clean glassmorphic booking card: Name, Work Email, Company, Primary Initiative (Oracle ERP / Data & AI / Cloud Migration / Other), and 'Request Executive Session' action.\n- Global Corporate Footer with Charlotte/Carolinas headquarters note, copyright 2025, practice links, and enterprise compliance badges (SOC2 Type II, ISO27001 compliant practices).",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/16508225471345425096/files/c277f5fb4cad46ecaa960823030449c6:download",
+              "name": "projects/16508225471345425096/files/c277f5fb4cad46ecaa960823030449c6"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#10b981",
+              "font": "PLUS_JAKARTA_SANS",
+              "headlineFont": "PLUS_JAKARTA_SANS",
+              "headlineFontFamily": "Plus Jakarta Sans",
+              "labelFont": "INTER",
+              "labelFontFamily": "Inter",
+              "namedColors": {
+                "background": "#0f131c",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2c3039",
+                "inverse_primary": "#006c49",
+                "inverse_surface": "#dfe2ee",
+                "on_background": "#dfe2ee",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#003824",
+                "on_primary_container": "#00422b",
+                "on_primary_fixed": "#002113",
+                "on_primary_fixed_variant": "#005236",
+                "on_secondary": "#002e6a",
+                "on_secondary_container": "#e6ecff",
+                "on_secondary_fixed": "#001a42",
+                "on_secondary_fixed_variant": "#004395",
+                "on_surface": "#dfe2ee",
+                "on_surface_variant": "#bbcabf",
+                "on_tertiary": "#003640",
+                "on_tertiary_container": "#003f4b",
+                "on_tertiary_fixed": "#001f26",
+                "on_tertiary_fixed_variant": "#004e5c",
+                "outline": "#86948a",
+                "outline_variant": "#3c4a42",
+                "primary": "#4edea3",
+                "primary_container": "#10b981",
+                "primary_fixed": "#6ffbbe",
+                "primary_fixed_dim": "#4edea3",
+                "secondary": "#adc6ff",
+                "secondary_container": "#0566d9",
+                "secondary_fixed": "#d8e2ff",
+                "secondary_fixed_dim": "#adc6ff",
+                "surface": "#0f131c",
+                "surface_bright": "#353942",
+                "surface_container": "#1c2028",
+                "surface_container_high": "#262a33",
+                "surface_container_highest": "#31353e",
+                "surface_container_low": "#181c24",
+                "surface_container_lowest": "#0a0e16",
+                "surface_dim": "#0f131c",
+                "surface_tint": "#4edea3",
+                "surface_variant": "#31353e",
+                "tertiary": "#4cd7f6",
+                "tertiary_container": "#00b2d0",
+                "tertiary_fixed": "#acedff",
+                "tertiary_fixed_dim": "#4cd7f6"
+              },
+              "overrideNeutralColor": "#0b0f17",
+              "overridePrimaryColor": "#10b981",
+              "overrideSecondaryColor": "#3b82f6",
+              "overrideTertiaryColor": "#06b6d4",
+              "roundness": "ROUND_EIGHT",
+              "spacing": {
+                "gutter": "1.5rem",
+                "gutter-desktop": "2rem",
+                "gutter-mobile": "1rem",
+                "margin": "2rem",
+                "margin-desktop": "3rem",
+                "margin-mobile": "1.25rem",
+                "space-lg": "1.5rem",
+                "space-md": "1rem",
+                "space-sm": "0.5rem",
+                "space-xl": "2.5rem",
+                "space-xs": "0.25rem"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.005em",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0em",
+                  "lineHeight": "24px"
+                },
+                "body-sm": {
+                  "fontFamily": "Inter",
+                  "fontSize": "13px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0em",
+                  "lineHeight": "20px"
+                },
+                "display-hero": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "56px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.03em",
+                  "lineHeight": "64px"
+                },
+                "display-hero-mobile": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "36px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "44px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "36px",
+                  "fontWeight": "600",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "44px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "28px",
+                  "fontWeight": "600",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "36px"
+                },
+                "headline-md": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "32px"
+                },
+                "headline-sm": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "20px",
+                  "fontWeight": "600",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "28px"
+                },
+                "label-code": {
+                  "fontFamily": "Inter",
+                  "fontSize": "11px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.06em",
+                  "lineHeight": "16px"
+                },
+                "label-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "20px"
+                },
+                "label-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "16px"
+                },
+                "label-metric": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "38px"
+                }
+              }
+            },
+            "title": "AARK Innovations - Enterprise Consulting Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed an ultra-modern, executive homepage for **AARK Innovations** (`AARK Innovations - Enterprise Consulting Homepage`) tailored specifically for high-level enterprise buyers across Oracle ERP, Data & AI, and Cloud Lakehouse ecosystems.\n\n### Key Architectural & Design Highlights:\n\n1. **Executive Palette & Aesthetic**:\n   - Anchored on a deep slate/midnight background (`#0B0F17`) with refined emerald (`#10B981`) and sapphire accents, translucent glassmorphism cards (`backdrop-blur-xl`), and crisp borders.\n   - Clean micro-typography with Plus Jakarta Sans and high-contrast metric callouts.\n\n2. **Navigation & Regional Authority Hero**:\n   - Glassmorphic top navigation with the `AARK Innovations` mark, direct anchor jumps, and prominent consultation CTA.\n   - Hero section featuring the live pulse location badge (**\"Fort Mill, SC · Charlotte & Carolinas\"**), the authoritative headline *\"Enterprise systems that run your business, not the other way around\"*, dual action paths, and a 4-metric glass stat bar (20+ hrs saved, 4–8 wks to production, 15+ yrs architect tenure, 100% senior staff).\n\n3. **Multi-Platform Ecosystem Bar**:\n   - Enterprise cards detailing specialized capabilities across **Oracle** (Cloud Infrastructure, ERP Cloud, OIC), **AWS** (Bedrock, Serverless Lakehouses), **Microsoft Azure** (Fabric, OpenAI Services), **Databricks** (Unity Catalog, Delta Live), and **Snowflake** (Cortex AI, Data Clean Rooms).\n\n4. **Three Consulting Practice Pillars**:\n   - Numbered service modules for **01 Oracle ERP Modernization**, **02 Data & AI Transformation**, and **03 Cloud & Lakehouse Platforms**, complete with scoped service lists and target velocity badges.\n\n5. **\"The Busywork is the Bottleneck\" Executive Contrast**:\n   - Side-by-side diagnostic contrasting traditional junior-staffed consulting bait-and-switch models against the **AARK Precision Architecture Model** (100% senior practitioners, autonomous team handoff).\n\n6. **Dynamic Interactive ROI & Time Saved Calculator**:\n   - Real-time client financial justification engine featuring interactive sliders for **Team Size**, **Weekly Hours Lost**, and **Average Fully Burdened Rate**, dynamically computing annual capital recovered, reclaimed hours, and payback velocity.\n\n7. **Structured Engagement Models**:\n   - Clear delivery tiers for **Turnkey Project Delivery**, **Executive Advisory Sprint**, and **Embedded Fractional Architects** with timeline, team composition, and SLA assurances.\n\n8. **Enterprise FAQ & Intake Form**:\n   - Common C-suite inquiry accordion paired with an executive booking card and corporate footer detailing security governance and regional coverage."
+    },
+    {
+      "suggestion": "Create a dedicated 'Oracle ERP Modernization' deep-dive practice page"
+    },
+    {
+      "suggestion": "Design the mobile viewport version for this homepage"
+    },
+    {
+      "suggestion": "Generate an interactive Executive Architecture Audit booking modal"
+    }
+  ],
+  "projectId": "16508225471345425096",
+  "sessionId": "5428948815463819273"
+}

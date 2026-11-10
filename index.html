@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AARK Innovations | Enterprise Systems, Oracle ERP, Data & AI Consulting</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              canvas: '#F8FAFC',       /* Crisp titanium-white */
+              card: '#FFFFFF',         /* Elevated pure white */
+              ink: '#0F172A',          /* Dominant deep slate black */
+              muted: '#475569',        /* Architectural secondary text */
+              subtle: '#64748B',       /* Tertiary text */
+              border: '#E2E8F0',       /* Hairline border */
+              borderDark: '#CBD5E1',   /* Emphasized border */
+              blue: '#1E40AF',         /* Solid Royal Sapphire Blue */
+              blueHover: '#1D4ED8',    /* Hover state */
+              cyan: '#0284C7',         /* High-tech cerulean */
+              emerald: '#059669',      /* Verified green */
+              amber: '#D97706',        /* Strategic warning/accent */
+              amberLight: '#FEF3C7',   /* Amber pill background */
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Architectural subtle dot grid background */
+    .bg-dots {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23CBD5E1'/%3E%3C/svg%3E");
+      background-size: 24px 24px;
+    }
+
+    /* Animated SVG stream lines */
+    @keyframes dashFlow {
+      from { stroke-dashoffset: 40; }
+      to { stroke-dashoffset: 0; }
+    }
+    .animate-flow {
+      stroke-dasharray: 8 6;
+      animation: dashFlow 1.2s linear infinite;
+    }
+    .animate-flow-reverse {
+      stroke-dasharray: 8 6;
+      animation: dashFlow 1.2s linear infinite reverse;
+    }
+
+    /* Pulse animation for node beacons (disabled to prevent scaling/drifting) */
+    .node-beacon {
+      transform-origin: center;
+    }
+
+    /* Sticky stacking cards */
+    .sticky-stack-1 {
+      position: sticky;
+      top: 100px;
+      z-index: 10;
+    }
+    .sticky-stack-2 {
+      position: sticky;
+      top: 130px;
+      z-index: 20;
+    }
+    .sticky-stack-3 {
+      position: sticky;
+      top: 160px;
+      z-index: 30;
+    }
+
+    /* Custom range slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #1E40AF;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 2px 8px rgba(30, 64, 175, 0.35);
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      background: #1D4ED8;
+    }
+  </style>
+</head>
+<body class="bg-brand-canvas text-brand-ink font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+  <!-- Top Regional Authority Bar -->
+  <div class="bg-brand-ink text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-slate-300">Fort Mill, SC · Serving Mid-Market & Enterprise Leadership across the Carolinas Corridor</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="text-emerald-400 font-semibold flex items-center gap-1">
+          ✓ 100% Senior Architects Only
+        </span>
+        <span class="hidden md:inline">|</span>
+        <a href="tel:+18038202275" class="hover:text-white transition-colors hidden md:inline">+1 (803) 820-AARK</a>
+        <span class="hidden md:inline">|</span>
+        <a href="mailto:hello@aarkinn.com" class="hover:text-white transition-colors">hello@aarkinn.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-sm group-hover:bg-brand-blueHover transition-colors">
+            A
+          </div>
+          <div>
+            <div class="font-extrabold text-xl tracking-tight text-brand-ink">
+              AARK Innovations
+            </div>
+            <div class="text-[10px] uppercase tracking-wider font-semibold text-brand-muted">
+              Enterprise Systems · Cloud · AI
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-muted">
+          <a href="#practices" class="hover:text-brand-blue transition-colors">Practices</a>
+          <a href="#ecosystem" class="hover:text-brand-blue transition-colors">Ecosystem</a>
+          <a href="#diagnostic" class="hover:text-brand-blue transition-colors">The Diagnostic</a>
+          <a href="#calculator" class="flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-brand-blue rounded-full border border-blue-100 hover:bg-blue-100 transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
+            ROI Calculator
+          </a>
+          <a href="#engagement" class="hover:text-brand-blue transition-colors">Engagement Models</a>
+          <a href="#faq" class="hover:text-brand-blue transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right CTA Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#contact" class="px-5 py-2.5 rounded-lg bg-brand-blue hover:bg-brand-blueHover text-white text-sm font-semibold shadow-sm transition-all flex items-center gap-2">
+            <span>Book Working Session</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="lg:hidden p-2 rounded-lg text-brand-ink hover:bg-slate-100" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-brand-border bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#practices" class="block px-3 py-2 rounded-md font-semibold text-brand-ink hover:bg-slate-50">Practices</a>
+      <a href="#ecosystem" class="block px-3 py-2 rounded-md font-semibold text-brand-ink hover:bg-slate-50">Ecosystem</a>
+      <a href="#diagnostic" class="block px-3 py-2 rounded-md font-semibold text-brand-ink hover:bg-slate-50">The Diagnostic</a>
+      <a href="#calculator" class="block px-3 py-2 rounded-md font-semibold text-brand-blue bg-blue-50">ROI Calculator</a>
+      <a href="#engagement" class="block px-3 py-2 rounded-md font-semibold text-brand-ink hover:bg-slate-50">Engagement Models</a>
+      <a href="#faq" class="block px-3 py-2 rounded-md font-semibold text-brand-ink hover:bg-slate-50">FAQ</a>
+      <div class="pt-2">
+        <a href="#contact" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-brand-blue text-white font-semibold">
+          <span>Book Working Session</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION WITH LIVE ANIMATED ENTERPRISE ARCHITECTURE SVG               -->
+    <!-- ========================================================================= -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 bg-brand-canvas bg-dots border-b border-brand-border overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Copy & Actions (6 Cols) -->
+          <div class="lg:col-span-6 flex flex-col items-start">
+            
+            <!-- Regional Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-border shadow-sm mb-6">
+              <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
+              </span>
+              <span class="text-xs font-semibold text-brand-ink">
+                Enterprise Cloud, ERP & AI Architecture
+              </span>
+            </div>
+
+            <!-- Solid Dominant Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-brand-ink leading-[1.1] mb-6">
+              Enterprise systems that run your business, <span class="text-brand-blue">not the other way around.</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-lg text-brand-muted leading-relaxed mb-8 font-normal">
+              A premier consulting firm helping mid-market and enterprise teams modernise how they operate — from <strong class="text-brand-ink font-semibold">Oracle ERP</strong> implementations to <strong class="text-brand-ink font-semibold">Data & AI</strong> platforms on AWS, Microsoft Azure, Databricks and Snowflake. Senior consultants, accountable delivery, measurable outcomes.
+            </p>
+
+            <!-- Dual Solid Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+              <a href="#contact" class="px-7 py-3.5 rounded-lg bg-brand-blue hover:bg-brand-blueHover text-white font-semibold text-center shadow-sm transition-all flex items-center justify-center gap-2">
+                <span>Book a 30-minute working session</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#calculator" class="px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-brand-ink border border-brand-border font-semibold text-center transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                <span>Calculate ROI</span>
+              </a>
+            </div>
+
+            <!-- Senior Guarantee Pill -->
+            <div class="flex items-center gap-3 p-3.5 rounded-lg bg-white border border-brand-border w-full max-w-lg">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold shrink-0">
+                ✓
+              </div>
+              <div class="text-xs text-brand-muted">
+                <strong class="text-brand-ink font-semibold">100% Senior Principal Model:</strong> Work is scoped, architected, and delivered directly by the seasoned leads you meet. Zero junior delegation.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Animated Enterprise System Architecture SVG (6 Cols) -->
+          <div class="lg:col-span-6">
+            <div class="bg-white rounded-2xl border-2 border-brand-border p-6 shadow-xl relative overflow-hidden">
+              <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                  <span class="ml-2 font-mono text-xs font-semibold text-brand-ink">aark-system-mesh.live</span>
+                </div>
+                <div class="font-mono text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  TELEMETRY ACTIVE
+                </div>
+              </div>
+
+              <!-- Animated SVG Flow Graphic: Enterprise Architecture Mesh -->
+              <svg viewBox="0 0 560 400" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background Grid Pattern & Marker Definitions (Solid Palette Fills) -->
+                <defs>
+                  <pattern id="mesh-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                    <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#F1F5F9" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="560" height="400" fill="url(#mesh-grid)" />
+
+                <!-- Connecting Data Pipelines (Curved Beziers, Underlay + Active Dashed Stroke + animateMotion Packets) -->
+                <!-- Pipeline 1: Oracle Fusion ERP -> AARK Central Integration Hub -->
+                <path d="M 135 95 C 200 95, 205 185, 245 185" fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                <path d="M 135 95 C 200 95, 205 185, 245 185" fill="none" stroke="#1E40AF" stroke-width="2.5" stroke-linecap="round" class="animate-flow" />
+                <circle r="3.5" fill="#1E40AF">
+                  <animateMotion dur="2s" repeatCount="indefinite" path="M 135 95 C 200 95, 205 185, 245 185" />
+                </circle>
+
+                <!-- Pipeline 2: AWS/Azure Landing Zones -> AARK Central Integration Hub -->
+                <path d="M 135 305 C 200 305, 205 215, 245 215" fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                <path d="M 135 305 C 200 305, 205 215, 245 215" fill="none" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" class="animate-flow-reverse" />
+                <circle r="3.5" fill="#0284C7">
+                  <animateMotion dur="2s" repeatCount="indefinite" path="M 135 305 C 200 305, 205 215, 245 215" />
+                </circle>
+
+                <!-- Pipeline 3: AARK Central Integration Hub -> Lakehouse Analytics -->
+                <path d="M 315 185 C 360 185, 370 95, 425 95" fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                <path d="M 315 185 C 360 185, 370 95, 425 95" fill="none" stroke="#1E40AF" stroke-width="2.5" stroke-linecap="round" class="animate-flow" />
+                <circle r="3.5" fill="#1E40AF">
+                  <animateMotion dur="2s" repeatCount="indefinite" path="M 315 185 C 360 185, 370 95, 425 95" />
+                </circle>
+
+                <!-- Pipeline 4: AARK Central Integration Hub -> Autonomous AI Agents -->
+                <path d="M 315 215 C 360 215, 370 305, 425 305" fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                <path d="M 315 215 C 360 215, 370 305, 425 305" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" class="animate-flow" />
+                <circle r="3.5" fill="#059669">
+                  <animateMotion dur="2s" repeatCount="indefinite" path="M 315 215 C 360 215, 370 305, 425 305" />
+                </circle>
+
+                <!-- Pipeline 5: Lakehouse Analytics <-> Autonomous AI Agents (Vertical RAG Loop) -->
+                <path d="M 465 135 L 465 265" fill="none" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                <path d="M 465 135 L 465 265" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" class="animate-flow" />
+                <circle r="3.5" fill="#D97706">
+                  <animateMotion dur="2s" repeatCount="indefinite" path="M 465 135 L 465 265" />
+                </circle>
+                <circle r="3.5" fill="#059669">
+                  <animateMotion dur="2s" begin="1s" repeatCount="indefinite" path="M 465 265 L 465 135" />
+                </circle>
+
+                <!-- ============================================================= -->
+                <!-- NODE 1: Oracle Fusion ERP (Top Left: cx=95, cy=95)            -->
+                <!-- ============================================================= -->
+                <g class="cursor-pointer group" onclick="selectNode('Oracle Fusion ERP', 'Fusion Cloud ERP, Financials, SCM &amp; OIC Integrations with sub-second event synchronization.')">
+                  <!-- Live Telemetry Pill -->
+                  <rect x="40" y="38" width="110" height="17" rx="8.5" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <circle cx="49" cy="46.5" r="3" fill="#059669" />
+                  <text x="57" y="49.5" font-size="7.5" font-weight="700" fill="#059669" font-family="'JetBrains Mono', monospace">ONLINE · 12ms · 480 tx/s</text>
+
+                  <!-- Node Outer Rings -->
+                  <circle cx="95" cy="95" r="40" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+                  <!-- Server Chassis Vector Art -->
+                  <rect x="74" y="76" width="42" height="38" rx="4" fill="#F8FAFC" stroke="#1E40AF" stroke-width="2" />
+                  <!-- Blade 1 -->
+                  <rect x="78" y="81" width="34" height="7" rx="1.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+                  <circle cx="82" cy="84.5" r="1.5" fill="#059669" />
+                  <circle cx="87" cy="84.5" r="1.5" fill="#1E40AF" />
+                  <line x1="92" y1="84.5" x2="108" y2="84.5" stroke="#CBD5E1" stroke-width="1" />
+                  <!-- Blade 2 -->
+                  <rect x="78" y="91" width="34" height="7" rx="1.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+                  <circle cx="82" cy="94.5" r="1.5" fill="#059669" />
+                  <circle cx="87" cy="94.5" r="1.5" fill="#0284C7" />
+                  <line x1="92" y1="94.5" x2="108" y2="94.5" stroke="#CBD5E1" stroke-width="1" />
+                  <!-- Blade 3 -->
+                  <rect x="78" y="101" width="34" height="7" rx="1.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+                  <circle cx="82" cy="104.5" r="1.5" fill="#059669" />
+                  <circle cx="87" cy="104.5" r="1.5" fill="#D97706" />
+                  <line x1="92" y1="104.5" x2="108" y2="104.5" stroke="#CBD5E1" stroke-width="1" />
+
+                  <!-- Text Labels & Badges -->
+                  <rect x="47" y="121" width="96" height="18" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+                  <text x="95" y="133" font-size="8.5" font-weight="700" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">ORACLE FUSION</text>
+                  <text x="95" y="148" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">Financials · SCM · OIC</text>
+                </g>
+
+                <!-- ============================================================= -->
+                <!-- NODE 2: AWS / Azure Landing Zones (Bottom Left: cx=95, cy=305) -->
+                <!-- ============================================================= -->
+                <g class="cursor-pointer group" onclick="selectNode('AWS &amp; Azure Landing Zones', 'Enterprise multi-cloud landing zones, automated VPC transit networks, and zero-trust security perimeters.')">
+                  <!-- Live Telemetry Pill -->
+                  <rect x="36" y="248" width="118" height="17" rx="8.5" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1" />
+                  <circle cx="44" cy="256.5" r="3" fill="#0284C7" />
+                  <text x="52" y="259.5" font-size="7.5" font-weight="700" fill="#0284C7" font-family="'JetBrains Mono', monospace">ACTIVE VPC · 6ms · 2.4 Gbps</text>
+
+                  <!-- Node Outer Rings -->
+                  <circle cx="95" cy="305" r="40" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+                  <!-- Dual Cloud Gateway & Shield Vector Art -->
+                  <path d="M 80 307 C 77 307 74 304 74 300 C 74 296 77 293 81 293 C 83 289 87 286 93 286 C 99 286 103 289 105 293 C 109 293 113 296 113 300 C 113 304 110 307 106 307 Z" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.8" />
+                  <rect x="85" y="303" width="20" height="14" rx="3" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5" />
+                  <circle cx="89" cy="310" r="1.5" fill="#0284C7" />
+                  <circle cx="95" cy="310" r="1.5" fill="#059669" />
+                  <circle cx="101" cy="310" r="1.5" fill="#1E40AF" />
+                  <line x1="85" y1="313" x2="82" y2="313" stroke="#0284C7" stroke-width="1.2" />
+                  <line x1="105" y1="313" x2="108" y2="313" stroke="#0284C7" stroke-width="1.2" />
+
+                  <!-- Text Labels & Badges -->
+                  <rect x="47" y="331" width="96" height="18" rx="4" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1" />
+                  <text x="95" y="343" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle" font-family="'JetBrains Mono', monospace">AWS / AZURE</text>
+                  <text x="95" y="358" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">Landing Zones · VPC Mesh</text>
+                </g>
+
+                <!-- ============================================================= -->
+                <!-- NODE 3: AARK Central Integration Hub (Center: cx=280, cy=200) -->
+                <!-- ============================================================= -->
+                <g class="cursor-pointer group" onclick="selectNode('AARK Central Integration Hub', 'High-throughput event routing bus, real-time message brokering, automated data cleansing, and SOC2 audit logging.')">
+                  <!-- Live Telemetry Pill -->
+                  <rect x="176" y="120" width="208" height="18" rx="9" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <circle cx="187" cy="129" r="3" fill="#059669" />
+                  <text x="196" y="132" font-size="7" font-weight="700" fill="#059669" font-family="'JetBrains Mono', monospace">100% OPERATIONAL · &lt;4ms p99 · 18.5k msg/s</text>
+
+                  <!-- Nexus Core Rings -->
+                  <circle cx="280" cy="200" r="54" fill="none" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="3 3" />
+                  <circle cx="280" cy="200" r="42" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2.5" />
+                  <circle cx="280" cy="200" r="35" fill="#F0F7FF" stroke="#BFDBFE" stroke-width="1" />
+
+                  <!-- Microprocessor / Router Die & Interconnect Pins -->
+                  <rect x="268" y="188" width="24" height="24" rx="4" fill="#1E40AF" stroke="#1D4ED8" stroke-width="1.5" />
+                  <line x1="261" y1="194" x2="268" y2="194" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="261" y1="206" x2="268" y2="206" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="292" y1="194" x2="299" y2="194" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="292" y1="206" x2="299" y2="206" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="274" y1="181" x2="274" y2="188" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="286" y1="181" x2="286" y2="188" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="274" y1="212" x2="274" y2="219" stroke="#1E40AF" stroke-width="1.5" />
+                  <line x1="286" y1="212" x2="286" y2="219" stroke="#1E40AF" stroke-width="1.5" />
+                  <circle cx="280" cy="200" r="4" fill="#059669" />
+                  <circle cx="280" cy="200" r="2" fill="#6EE7B7" />
+
+                  <!-- Badges & Sub-text -->
+                  <rect x="206" y="252" width="148" height="20" rx="10" fill="#1E40AF" />
+                  <text x="280" y="265.5" font-size="8.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">AARK INTEGRATION HUB</text>
+                  <text x="280" y="284" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">EventStream · gRPC · SOC2</text>
+                </g>
+
+                <!-- ============================================================= -->
+                <!-- NODE 4: Databricks / Snowflake Lakehouse (Top Right: 465, 95) -->
+                <!-- ============================================================= -->
+                <g class="cursor-pointer group" onclick="selectNode('Databricks &amp; Snowflake Lakehouse', 'Unified analytical lakehouse on Databricks Unity Catalog &amp; Snowflake Cortex with granular governance.')">
+                  <!-- Live Telemetry Pill -->
+                  <rect x="382" y="38" width="166" height="17" rx="8.5" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1" />
+                  <circle cx="391" cy="46.5" r="3" fill="#0284C7" />
+                  <text x="399" y="49.5" font-size="7.5" font-weight="700" fill="#0284C7" font-family="'JetBrains Mono', monospace">STREAMING · 0.38s query · 185 MB/s</text>
+
+                  <!-- Node Outer Rings -->
+                  <circle cx="465" cy="95" r="40" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+                  <!-- Lakehouse Cylinder Vector Art -->
+                  <!-- Lower cylinder (Delta Lake storage tier) -->
+                  <path d="M 449 97 C 449 93 456 90 465 90 C 474 90 481 93 481 97 L 481 107 C 481 111 474 114 465 114 C 456 114 449 111 449 107 Z" fill="#F0F9FF" stroke="#1E40AF" stroke-width="1.5" />
+                  <ellipse cx="465" cy="97" rx="16" ry="4" fill="#EFF6FF" stroke="#1E40AF" stroke-width="1.2" />
+                  <!-- Upper cylinder (Snowflake Cortex warehouse tier) -->
+                  <path d="M 449 84 C 449 80 456 77 465 77 C 474 77 481 80 481 84 L 481 94 C 481 98 474 101 465 101 C 456 101 449 98 449 94 Z" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.5" />
+                  <ellipse cx="465" cy="84" rx="16" ry="4" fill="#EFF6FF" stroke="#1E40AF" stroke-width="1.2" />
+                  <!-- Analytics query partition bars -->
+                  <line x1="458" y1="102" x2="458" y2="108" stroke="#0284C7" stroke-width="1.5" />
+                  <line x1="465" y1="100" x2="465" y2="108" stroke="#059669" stroke-width="1.5" />
+                  <line x1="472" y1="98" x2="472" y2="108" stroke="#1E40AF" stroke-width="1.5" />
+
+                  <!-- Text Labels & Badges -->
+                  <rect x="412" y="121" width="106" height="18" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+                  <text x="465" y="133" font-size="8.5" font-weight="700" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">LAKEHOUSE ANALYTICS</text>
+                  <text x="465" y="148" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">Databricks · Snowflake</text>
+                </g>
+
+                <!-- ============================================================= -->
+                <!-- NODE 5: Autonomous AI Agents (Bottom Right: 465, 305)         -->
+                <!-- ============================================================= -->
+                <g class="cursor-pointer group" onclick="selectNode('Autonomous AI Agents', 'Tenant-isolated LLM agentic workflows, multi-document RAG pipelines, and automated business decision loops.')">
+                  <!-- Live Telemetry Pill -->
+                  <rect x="375" y="248" width="180" height="17" rx="8.5" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <circle cx="384" cy="256.5" r="3" fill="#059669" />
+                  <text x="392" y="259.5" font-size="7.5" font-weight="700" fill="#059669" font-family="'JetBrains Mono', monospace">INFERENCE LIVE · 52 tokens/s · 99.6% accuracy</text>
+
+                  <!-- Node Outer Rings -->
+                  <circle cx="465" cy="305" r="40" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+                  <!-- Neural Processor Chip Vector Art -->
+                  <rect x="448" y="288" width="34" height="34" rx="4" fill="#F0FDF4" stroke="#059669" stroke-width="2" />
+                  <circle cx="456" cy="296" r="2.5" fill="#059669" />
+                  <circle cx="474" cy="296" r="2.5" fill="#059669" />
+                  <circle cx="456" cy="314" r="2.5" fill="#059669" />
+                  <circle cx="474" cy="314" r="2.5" fill="#059669" />
+                  <line x1="456" y1="296" x2="474" y2="296" stroke="#059669" stroke-width="1" />
+                  <line x1="456" y1="314" x2="474" y2="314" stroke="#059669" stroke-width="1" />
+                  <line x1="456" y1="296" x2="474" y2="314" stroke="#059669" stroke-width="1" />
+                  <line x1="474" y1="296" x2="456" y2="314" stroke="#059669" stroke-width="1" />
+                  <circle cx="465" cy="305" r="3.5" fill="#1E40AF" />
+                  <!-- Chip Pins -->
+                  <line x1="444" y1="296" x2="448" y2="296" stroke="#059669" stroke-width="1.5" />
+                  <line x1="444" y1="314" x2="448" y2="314" stroke="#059669" stroke-width="1.5" />
+                  <line x1="482" y1="296" x2="486" y2="296" stroke="#059669" stroke-width="1.5" />
+                  <line x1="482" y1="314" x2="486" y2="314" stroke="#059669" stroke-width="1.5" />
+                  <line x1="456" y1="284" x2="456" y2="288" stroke="#059669" stroke-width="1.5" />
+                  <line x1="474" y1="284" x2="474" y2="288" stroke="#059669" stroke-width="1.5" />
+                  <line x1="456" y1="322" x2="456" y2="326" stroke="#059669" stroke-width="1.5" />
+                  <line x1="474" y1="322" x2="474" y2="326" stroke="#059669" stroke-width="1.5" />
+
+                  <!-- Text Labels & Badges -->
+                  <rect x="412" y="331" width="106" height="18" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <text x="465" y="343" font-size="8.5" font-weight="700" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">AUTONOMOUS AI AGENTS</text>
+                  <text x="465" y="358" font-size="9" font-weight="600" fill="#0F172A" text-anchor="middle">Private VPC · GenAI</text>
+                </g>
+              </svg>
+
+              <!-- Node Detail Status Banner -->
+              <div id="node-info" class="mt-4 p-3 rounded-lg bg-slate-50 border border-brand-border text-xs flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" id="node-pulse"></span>
+                  <div>
+                    <span class="font-bold text-brand-ink" id="node-title">Oracle Fusion ERP</span>: 
+                    <span class="text-brand-muted" id="node-desc">Fusion Cloud ERP, Financials, SCM &amp; OIC Integrations with sub-second event synchronization.</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span id="node-telemetry" class="font-mono text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">ONLINE · 12ms · 480 tx/s</span>
+                  <span class="text-brand-blue font-mono text-[10px] uppercase font-bold shrink-0">Click node to inspect</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Stat Metric Bar -->
+        <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 rounded-2xl bg-white border border-brand-border shadow-sm">
+          <div class="p-4 border-r-0 lg:border-r border-b lg:border-b-0 border-slate-100">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-blue mb-1">20+ hrs</div>
+            <div class="text-sm font-semibold text-brand-ink">Returned weekly</div>
+            <div class="text-xs text-brand-muted mt-0.5">To typical client operational team</div>
+          </div>
+
+          <div class="p-4 border-r-0 sm:border-r-0 lg:border-r border-b lg:border-b-0 border-slate-100">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-ink mb-1">4–8 wks</div>
+            <div class="text-sm font-semibold text-brand-ink">Time to production</div>
+            <div class="text-xs text-brand-muted mt-0.5">Average for first automated workflow</div>
+          </div>
+
+          <div class="p-4 border-r-0 lg:border-r border-b sm:border-b-0 border-slate-100">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-ink mb-1">15+ yrs</div>
+            <div class="text-sm font-semibold text-brand-ink">Cloud & data tenure</div>
+            <div class="text-xs text-brand-muted mt-0.5">Senior architect career average</div>
+          </div>
+
+          <div class="p-4">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-amber mb-1">100%</div>
+            <div class="text-sm font-semibold text-brand-ink">Senior practitioners</div>
+            <div class="text-xs text-brand-muted mt-0.5">Zero outsourced junior analyst billing</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ENTERPRISE PLATFORMS ECOSYSTEM GRID                                       -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-white border-b border-brand-border" id="ecosystem">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Platforms We Deliver On</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-ink tracking-tight">
+              Deep hands-on experience, not a partner logo wall
+            </h2>
+          </div>
+          <p class="text-brand-muted max-w-md text-sm sm:text-base">
+            Every engagement is staffed with consultants who have shipped production workloads on these core enterprise architectures.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <!-- Oracle -->
+          <div class="p-6 rounded-xl bg-brand-canvas border border-brand-border hover:border-brand-blue transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 text-brand-blue font-bold flex items-center justify-center mb-4 text-sm group-hover:bg-brand-blue group-hover:text-white transition-colors">
+              OR
+            </div>
+            <h3 class="font-bold text-lg text-brand-ink mb-1">Oracle</h3>
+            <p class="text-xs font-mono text-brand-blue mb-3">Fusion ERP · EBS · OCI</p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Cloud rollouts, Financials, SCM, EBS to Fusion migration, and OIC middleware.
+            </p>
+          </div>
+
+          <!-- AWS -->
+          <div class="p-6 rounded-xl bg-brand-canvas border border-brand-border hover:border-brand-blue transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 font-bold flex items-center justify-center mb-4 text-sm group-hover:bg-brand-amber group-hover:text-white transition-colors">
+              AWS
+            </div>
+            <h3 class="font-bold text-lg text-brand-ink mb-1">AWS</h3>
+            <p class="text-xs font-mono text-amber-700 mb-3">Migration · Data · Bedrock</p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Landing zones, Redshift, Glue, private Bedrock generative AI VPC infrastructure.
+            </p>
+          </div>
+
+          <!-- Azure -->
+          <div class="p-6 rounded-xl bg-brand-canvas border border-brand-border hover:border-brand-blue transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 text-brand-blue font-bold flex items-center justify-center mb-4 text-sm group-hover:bg-brand-blue group-hover:text-white transition-colors">
+              AZ
+            </div>
+            <h3 class="font-bold text-lg text-brand-ink mb-1">Microsoft Azure</h3>
+            <p class="text-xs font-mono text-brand-blue mb-3">Fabric · Synapse · OpenAI</p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Enterprise Microsoft Fabric lakehouses, Synapse data pipelines, and tenant-isolated Azure OpenAI.
+            </p>
+          </div>
+
+          <!-- Databricks -->
+          <div class="p-6 rounded-xl bg-brand-canvas border border-brand-border hover:border-brand-blue transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-red-50 border border-red-200 text-red-600 font-bold flex items-center justify-center mb-4 text-sm group-hover:bg-red-600 group-hover:text-white transition-colors">
+              DB
+            </div>
+            <h3 class="font-bold text-lg text-brand-ink mb-1">Databricks</h3>
+            <p class="text-xs font-mono text-red-600 mb-3">Lakehouse · Unity Catalog</p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Production Lakehouse builds, Delta Live Tables, fine-grained Unity governance, and MLflow.
+            </p>
+          </div>
+
+          <!-- Snowflake -->
+          <div class="p-6 rounded-xl bg-brand-canvas border border-brand-border hover:border-brand-blue transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 text-sky-600 font-bold flex items-center justify-center mb-4 text-sm group-hover:bg-sky-600 group-hover:text-white transition-colors">
+              SF
+            </div>
+            <h3 class="font-bold text-lg text-brand-ink mb-1">Snowflake</h3>
+            <p class="text-xs font-mono text-sky-600 mb-3">Warehouse · Sharing · Cortex</p>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Enterprise data warehousing, cross-region secure data sharing, and Cortex LLM functions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- STICKY SCROLLABLE CARDS: 3 CORE CONSULTING PRACTICES                      -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-brand-canvas border-b border-brand-border relative" id="practices">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Consulting Practices</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-ink tracking-tight mb-4">
+            Three practices. One accountable team.
+          </h2>
+          <p class="text-lg text-brand-muted leading-relaxed">
+            Enterprise ERP, modern data platforms and applied AI — delivered by the same senior consultants from scoping through go-live and support.
+          </p>
+        </div>
+
+        <!-- Sticky Stacking Cards Container -->
+        <div class="space-y-8 pb-12">
+          
+          <!-- Sticky Card 1: Oracle ERP Services -->
+          <div class="sticky-stack-1 bg-white border-2 border-brand-border rounded-2xl p-8 sm:p-10 shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-blue-50 text-brand-blue border border-blue-200">PRACTICE 01</span>
+                  <span class="text-xs font-bold uppercase text-brand-muted tracking-wider">Enterprise ERP Modernization</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-ink mb-4">Oracle ERP Services</h3>
+                <p class="text-brand-muted text-base mb-6 leading-relaxed">
+                  Implementation, upgrade and managed support for Oracle Fusion Cloud ERP and E-Business Suite — Financials, Procurement, Supply Chain, Projects and HCM.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-brand-blue font-bold">✓</span> Fusion Cloud implementations & rollouts
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-brand-blue font-bold">✓</span> EBS to Fusion Cloud migrations
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-brand-blue font-bold">✓</span> Integrations with OIC, APIs and middleware
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-brand-blue font-bold">✓</span> Reporting with OTBI, BI Publisher & FAW
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="#contact" class="px-5 py-2.5 rounded-lg bg-brand-blue text-white text-sm font-semibold hover:bg-brand-blueHover transition-colors">
+                    Scope Oracle Migration
+                  </a>
+                  <span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">Production in 4-8 weeks</span>
+                </div>
+              </div>
+
+              <!-- Animated SVG: Oracle Sync Engine -->
+              <div class="lg:col-span-5 bg-slate-50 rounded-xl p-5 border border-brand-border flex items-center justify-center">
+                <!-- Animated SVG: Oracle Sync Engine (Enterprise Redesign) -->
+                <svg viewBox="0 0 380 250" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Header Telemetry Bar -->
+                  <text x="16" y="22" font-size="8" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#64748B">ORACLE FUSION // OIC INTEGRATION BUS</text>
+                  <rect x="250" y="10" width="114" height="18" rx="9" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <circle cx="260" cy="19" r="3" fill="#059669" />
+                  <text x="268" y="22.5" font-size="7.5" font-weight="700" fill="#059669" font-family="'JetBrains Mono', monospace">SYNC: 100% · 12ms</text>
+
+                  <!-- Left: Oracle Fusion ERP Chassis -->
+                  <rect x="16" y="38" width="122" height="194" rx="8" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8" />
+                  <rect x="24" y="46" width="106" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+                  <text x="77" y="60" font-size="9" font-weight="800" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">ORACLE FUSION</text>
+                  <!-- Module 1 -->
+                  <rect x="24" y="74" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="35" cy="88" r="3" fill="#1E40AF" />
+                  <text x="46" y="86" font-size="8.5" font-weight="700" fill="#0F172A">Financials Cloud</text>
+                  <text x="46" y="96" font-size="7" fill="#64748B">GL · AP · AR · FA</text>
+                  <!-- Module 2 -->
+                  <rect x="24" y="108" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="35" cy="122" r="3" fill="#0284C7" />
+                  <text x="46" y="120" font-size="8.5" font-weight="700" fill="#0F172A">Supply Chain (SCM)</text>
+                  <text x="46" y="130" font-size="7" fill="#64748B">Inventory · Orders</text>
+                  <!-- Module 3 -->
+                  <rect x="24" y="142" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="35" cy="156" r="3" fill="#059669" />
+                  <text x="46" y="154" font-size="8.5" font-weight="700" fill="#0F172A">Procurement &amp; PO</text>
+                  <text x="46" y="164" font-size="7" fill="#64748B">Sourcing · Contracts</text>
+                  <!-- Protocol footer -->
+                  <rect x="24" y="176" width="106" height="20" rx="3" fill="#EFF6FF" />
+                  <text x="77" y="189" font-size="7.5" font-weight="700" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">REST · SOAP · Events</text>
+                  <text x="77" y="215" font-size="7" font-weight="600" fill="#475569" text-anchor="middle">Automated OTBI Sync</text>
+
+                  <!-- Center: OIC Integration Broker Nexus -->
+                  <circle cx="190" cy="135" r="28" fill="none" stroke="#1E40AF" stroke-width="1.5" />
+                  <circle cx="190" cy="135" r="22" fill="#1E40AF" stroke="#1D4ED8" stroke-width="2" />
+                  <circle cx="190" cy="135" r="15" fill="#FFFFFF" />
+                  <text x="190" y="139" font-size="9.5" font-weight="900" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">OIC</text>
+                  <text x="190" y="172" font-size="8" font-weight="700" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">2.4k tx/s</text>
+                  <text x="190" y="184" font-size="7" font-weight="600" fill="#64748B" text-anchor="middle">SOC2 / TLS 1.3</text>
+                  <text x="190" y="195" font-size="6.5" font-weight="700" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">EVENTS BUS</text>
+
+                  <!-- Right: Enterprise Target Systems -->
+                  <rect x="242" y="38" width="122" height="194" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.8" />
+                  <rect x="250" y="46" width="106" height="22" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <text x="303" y="60" font-size="9" font-weight="800" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">TARGET SYSTEMS</text>
+                  <!-- Target 1 -->
+                  <rect x="250" y="74" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="261" cy="88" r="3" fill="#1E40AF" />
+                  <text x="272" y="86" font-size="8.5" font-weight="700" fill="#0F172A">Lakehouse Analytics</text>
+                  <text x="272" y="96" font-size="7" fill="#64748B">Databricks · Snowflake</text>
+                  <!-- Target 2 -->
+                  <rect x="250" y="108" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="261" cy="122" r="3" fill="#059669" />
+                  <text x="272" y="120" font-size="8.5" font-weight="700" fill="#0F172A">Banking APIs</text>
+                  <text x="272" y="130" font-size="7" fill="#64748B">ISO 20022 · Real-Time</text>
+                  <!-- Target 3 -->
+                  <rect x="250" y="142" width="106" height="28" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="261" cy="156" r="3" fill="#0284C7" />
+                  <text x="272" y="154" font-size="8.5" font-weight="700" fill="#0F172A">CRM &amp; Operations</text>
+                  <text x="272" y="164" font-size="7" fill="#64748B">Field Ops · Commerce</text>
+                  <!-- Target footer -->
+                  <rect x="250" y="176" width="106" height="20" rx="3" fill="#ECFDF5" />
+                  <text x="303" y="189" font-size="7.5" font-weight="700" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">Bi-directional Sync</text>
+                  <text x="303" y="215" font-size="7" font-weight="600" fill="#475569" text-anchor="middle">Zero Data Drift</text>
+
+                  <!-- Animated Bezier Flow Lines -->
+                  <path d="M 138 88 C 160 88, 165 130, 168 132" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 138 88 C 160 88, 165 130, 168 132" fill="none" stroke="#1E40AF" stroke-width="2" class="animate-flow" />
+                  <path d="M 138 122 L 168 135" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 138 122 L 168 135" fill="none" stroke="#1E40AF" stroke-width="2" class="animate-flow" />
+                  <path d="M 138 156 C 160 156, 165 140, 168 138" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 138 156 C 160 156, 165 140, 168 138" fill="none" stroke="#1E40AF" stroke-width="2" class="animate-flow" />
+
+                  <path d="M 212 132 C 215 130, 220 88, 242 88" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 212 132 C 215 130, 220 88, 242 88" fill="none" stroke="#059669" stroke-width="2" class="animate-flow" />
+                  <path d="M 212 135 L 242 122" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 212 135 L 242 122" fill="none" stroke="#059669" stroke-width="2" class="animate-flow" />
+                  <path d="M 212 138 C 215 140, 220 156, 242 156" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+                  <path d="M 212 138 C 215 140, 220 156, 242 156" fill="none" stroke="#059669" stroke-width="2" class="animate-flow" />
+
+                  <!-- Active Packets -->
+                  <circle r="2.5" fill="#1E40AF">
+                    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 138 88 C 160 88, 165 130, 168 132" />
+                  </circle>
+                  <circle r="2.5" fill="#059669">
+                    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 212 132 C 215 130, 220 88, 242 88" />
+                  </circle>
+                  <circle r="2.5" fill="#0284C7">
+                    <animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" path="M 138 122 L 168 135" />
+                  </circle>
+                  <circle r="2.5" fill="#059669">
+                    <animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" path="M 212 135 L 242 122" />
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sticky Card 2: Data & AI -->
+          <div class="sticky-stack-2 bg-white border-2 border-brand-border rounded-2xl p-8 sm:p-10 shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">PRACTICE 02</span>
+                  <span class="text-xs font-bold uppercase text-brand-muted tracking-wider">Data Foundations & Machine Intelligence</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-ink mb-4">Data & AI Platforms</h3>
+                <p class="text-brand-muted text-base mb-6 leading-relaxed">
+                  Trustworthy data foundations and AI grounded in your own business — from pipelines and warehouses to assistants, forecasting and document automation.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-emerald-600 font-bold">✓</span> Databricks & Snowflake Lakehouses
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-emerald-600 font-bold">✓</span> Data quality, lineage & Unity governance
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-emerald-600 font-bold">✓</span> GenAI assistants grounded in documents
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-emerald-600 font-bold">✓</span> Guarded ML models with private evaluation
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="#contact" class="px-5 py-2.5 rounded-lg bg-emerald-700 text-white text-sm font-semibold hover:bg-emerald-800 transition-colors">
+                    Build Data & AI Roadmap
+                  </a>
+                  <span class="text-xs font-mono text-blue-700 bg-blue-50 px-2.5 py-1 rounded border border-blue-200">Zero Public Model Training</span>
+                </div>
+              </div>
+
+              <!-- Animated SVG: AI & Data Lakehouse Pipeline -->
+              <div class="lg:col-span-5 bg-slate-50 rounded-xl p-5 border border-brand-border flex items-center justify-center">
+                <!-- Animated SVG: AI & Data Lakehouse Pipeline (Enterprise Redesign) -->
+                <svg viewBox="0 0 360 230" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Header Telemetry Bar -->
+                  <text x="16" y="20" font-size="8" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#64748B">DATA-AI-MESH // ENTERPRISE RAG PIPELINE</text>
+                  <rect x="220" y="9" width="124" height="17" rx="8.5" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+                  <circle cx="229" cy="17.5" r="3" fill="#059669" />
+                  <text x="237" y="20.5" font-size="7.5" font-weight="700" fill="#059669" font-family="'JetBrains Mono', monospace">PRIVACY: 100% ISOLATED</text>
+
+                  <!-- Stage 1 (Left): Multi-Modal Ingestion -->
+                  <rect x="14" y="36" width="72" height="174" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5" />
+                  <text x="50" y="52" font-size="8" font-weight="800" fill="#0284C7" text-anchor="middle" font-family="'JetBrains Mono', monospace">INGESTION</text>
+                  <!-- Source A -->
+                  <rect x="19" y="60" width="62" height="30" rx="3" fill="#F0F9FF" stroke="#BAE6FD" />
+                  <text x="50" y="73" font-size="8" font-weight="700" fill="#0F172A" text-anchor="middle">DOCS &amp; PDFs</text>
+                  <text x="50" y="83" font-size="6.5" fill="#64748B" text-anchor="middle">Unstructured</text>
+                  <!-- Source B -->
+                  <rect x="19" y="98" width="62" height="30" rx="3" fill="#EFF6FF" stroke="#BFDBFE" />
+                  <text x="50" y="111" font-size="8" font-weight="700" fill="#0F172A" text-anchor="middle">LAKEHOUSE</text>
+                  <text x="50" y="121" font-size="6.5" fill="#64748B" text-anchor="middle">Delta / Unity</text>
+                  <!-- Source C -->
+                  <rect x="19" y="136" width="62" height="30" rx="3" fill="#F0FDF4" stroke="#BBF7D0" />
+                  <text x="50" y="149" font-size="8" font-weight="700" fill="#0F172A" text-anchor="middle">CDC STREAMS</text>
+                  <text x="50" y="159" font-size="6.5" fill="#64748B" text-anchor="middle">Kafka Logs</text>
+                  <!-- Ingestion Throughput -->
+                  <text x="50" y="186" font-size="7" font-weight="700" fill="#0284C7" text-anchor="middle" font-family="'JetBrains Mono', monospace">185 MB/s</text>
+                  <text x="50" y="198" font-size="6.5" font-weight="600" fill="#64748B" text-anchor="middle">Continuous ETL</text>
+
+                  <!-- Stage 2 (Mid-Left): Vector Store & Governance Engine -->
+                  <rect x="96" y="48" width="72" height="152" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+                  <text x="132" y="64" font-size="8" font-weight="800" fill="#0F172A" text-anchor="middle" font-family="'JetBrains Mono', monospace">VECTOR DB</text>
+                  <!-- Vector Matrix Representation -->
+                  <rect x="103" y="72" width="58" height="42" rx="3" fill="#F8FAFC" stroke="#E2E8F0" />
+                  <circle cx="113" cy="81" r="1.5" fill="#059669" />
+                  <circle cx="123" cy="81" r="1.5" fill="#1E40AF" />
+                  <circle cx="133" cy="81" r="1.5" fill="#0284C7" />
+                  <circle cx="143" cy="81" r="1.5" fill="#059669" />
+                  <circle cx="113" cy="93" r="1.5" fill="#0284C7" />
+                  <circle cx="123" cy="93" r="1.5" fill="#059669" />
+                  <circle cx="133" cy="93" r="1.5" fill="#1E40AF" />
+                  <circle cx="143" cy="93" r="1.5" fill="#0284C7" />
+                  <circle cx="113" cy="105" r="1.5" fill="#1E40AF" />
+                  <circle cx="123" cy="105" r="1.5" fill="#0284C7" />
+                  <circle cx="133" cy="105" r="1.5" fill="#059669" />
+                  <circle cx="143" cy="105" r="1.5" fill="#1E40AF" />
+                  <text x="132" y="126" font-size="7.5" font-weight="700" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">HNSW INDEX</text>
+                  <text x="132" y="137" font-size="6.5" font-weight="600" fill="#64748B" text-anchor="middle">1536-dim</text>
+                  <rect x="101" y="146" width="62" height="16" rx="3" fill="#EFF6FF" stroke="#BFDBFE" />
+                  <text x="132" y="157" font-size="6.5" font-weight="700" fill="#1E40AF" text-anchor="middle">Unity Catalog</text>
+                  <text x="132" y="176" font-size="6.5" font-weight="600" fill="#475569" text-anchor="middle">RBAC · Lineage</text>
+
+                  <!-- Stage 3 (Mid-Right): Private VPC Neural RAG Core -->
+                  <rect x="178" y="48" width="82" height="152" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="2" />
+                  <text x="219" y="64" font-size="8" font-weight="800" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">RAG CORE</text>
+                  <!-- Neural Processor Chip -->
+                  <rect x="199" y="72" width="40" height="40" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="1.5" />
+                  <circle cx="209" cy="82" r="2.5" fill="#059669" />
+                  <circle cx="229" cy="82" r="2.5" fill="#059669" />
+                  <circle cx="209" cy="102" r="2.5" fill="#059669" />
+                  <circle cx="229" cy="102" r="2.5" fill="#059669" />
+                  <line x1="209" y1="82" x2="229" y2="102" stroke="#059669" stroke-width="1" />
+                  <line x1="229" y1="82" x2="209" y2="102" stroke="#059669" stroke-width="1" />
+                  <circle cx="219" cy="92" r="3.5" fill="#1E40AF" />
+                  <line x1="195" y1="82" x2="199" y2="82" stroke="#059669" stroke-width="1.5" />
+                  <line x1="195" y1="102" x2="199" y2="102" stroke="#059669" stroke-width="1.5" />
+                  <line x1="239" y1="82" x2="243" y2="82" stroke="#059669" stroke-width="1.5" />
+                  <line x1="239" y1="102" x2="243" y2="102" stroke="#059669" stroke-width="1.5" />
+                  <!-- Guardrails Badge -->
+                  <rect x="186" y="120" width="66" height="16" rx="3" fill="#059669" />
+                  <text x="219" y="131" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">GUARDRAILS</text>
+                  <text x="219" y="149" font-size="7.5" font-weight="700" fill="#0F172A" text-anchor="middle" font-family="'JetBrains Mono', monospace">ACC: 99.4%</text>
+                  <text x="219" y="160" font-size="7" font-weight="600" fill="#64748B" text-anchor="middle">TTFT: 42ms</text>
+                  <text x="219" y="174" font-size="6.5" font-weight="700" fill="#059669" text-anchor="middle">Zero Public Training</text>
+
+                  <!-- Stage 4 (Right): Production AI Deliverables -->
+                  <rect x="270" y="36" width="76" height="174" rx="6" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.5" />
+                  <text x="308" y="52" font-size="8" font-weight="800" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">DELIVERABLES</text>
+                  <!-- Target A -->
+                  <rect x="276" y="60" width="64" height="42" rx="4" fill="#EFF6FF" stroke="#BFDBFE" />
+                  <text x="308" y="74" font-size="8" font-weight="800" fill="#1E40AF" text-anchor="middle">INSIGHTS</text>
+                  <text x="308" y="86" font-size="7" font-weight="600" fill="#0F172A" text-anchor="middle">Executive BI</text>
+                  <text x="308" y="96" font-size="6.5" fill="#64748B" text-anchor="middle">Forecasting</text>
+                  <!-- Target B -->
+                  <rect x="276" y="112" width="64" height="42" rx="4" fill="#ECFDF5" stroke="#A7F3D0" />
+                  <text x="308" y="126" font-size="8" font-weight="800" fill="#059669" text-anchor="middle">AI AGENTS</text>
+                  <text x="308" y="138" font-size="7" font-weight="600" fill="#0F172A" text-anchor="middle">Auto-Actions</text>
+                  <text x="308" y="148" font-size="6.5" fill="#64748B" text-anchor="middle">Audit Logs</text>
+                  <text x="308" y="176" font-size="7" font-weight="700" fill="#059669" text-anchor="middle" font-family="'JetBrains Mono', monospace">Zero Leakage</text>
+                  <text x="308" y="188" font-size="6.5" font-weight="600" fill="#64748B" text-anchor="middle">SOC 2 Type II</text>
+
+                  <!-- Animated Connectors -->
+                  <path d="M 86 75 L 96 90" stroke="#0284C7" stroke-width="1.8" class="animate-flow" />
+                  <path d="M 86 113 L 96 113" stroke="#0284C7" stroke-width="1.8" class="animate-flow" />
+                  <path d="M 86 151 L 96 135" stroke="#0284C7" stroke-width="1.8" class="animate-flow" />
+
+                  <path d="M 168 115 L 178 115" stroke="#059669" stroke-width="2.5" class="animate-flow" />
+
+                  <path d="M 260 92 C 265 92, 268 81, 276 81" stroke="#1E40AF" stroke-width="1.8" class="animate-flow" />
+                  <path d="M 260 133 C 265 133, 268 133, 276 133" stroke="#059669" stroke-width="1.8" class="animate-flow" />
+
+                  <!-- Active Packets -->
+                  <circle r="2.5" fill="#0284C7">
+                    <animateMotion dur="2s" repeatCount="indefinite" path="M 86 113 L 96 113" />
+                  </circle>
+                  <circle r="2.5" fill="#059669">
+                    <animateMotion dur="1.6s" repeatCount="indefinite" path="M 168 115 L 178 115" />
+                  </circle>
+                  <circle r="2.5" fill="#1E40AF">
+                    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 260 92 C 265 92, 268 81, 276 81" />
+                  </circle>
+                  <circle r="2.5" fill="#059669">
+                    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 260 133 C 265 133, 268 133, 276 133" />
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sticky Card 3: Cloud & Platforms -->
+          <div class="sticky-stack-3 bg-white border-2 border-brand-border rounded-2xl p-8 sm:p-10 shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-amber-50 text-amber-800 border border-amber-200">PRACTICE 03</span>
+                  <span class="text-xs font-bold uppercase text-brand-muted tracking-wider">Cloud Infrastructure & FinOps</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-ink mb-4">Cloud & Data Platforms</h3>
+                <p class="text-brand-muted text-base mb-6 leading-relaxed">
+                  Architecture, migration and cost optimisation across AWS and Microsoft Azure, with Databricks and Snowflake as the analytics layer on top.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-amber-600 font-bold">✓</span> Secure landing zones & multi-cloud architecture
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-amber-600 font-bold">✓</span> Migration of workloads, databases & ERP
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-amber-600 font-bold">✓</span> FinOps: 20–40% cloud cost reduction review
+                  </div>
+                  <div class="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span class="text-amber-600 font-bold">✓</span> Zero-trust security, identity & operations
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <a href="#contact" class="px-5 py-2.5 rounded-lg bg-amber-600 text-white text-sm font-semibold hover:bg-amber-700 transition-colors">
+                    Request Cloud FinOps Audit
+                  </a>
+                  <span class="text-xs font-mono text-slate-700 bg-slate-100 px-2.5 py-1 rounded border border-slate-200">SOC 2 & ISO Aligned</span>
+                </div>
+              </div>
+
+              <!-- Animated SVG: Multi-Cloud Mesh -->
+              <div class="lg:col-span-5 bg-slate-50 rounded-xl p-5 border border-brand-border flex items-center justify-center">
+                <!-- Animated SVG: Multi-Cloud Mesh (Enterprise FinOps Redesign) -->
+                <svg viewBox="0 0 360 230" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Header Telemetry Bar -->
+                  <text x="16" y="20" font-size="8" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#64748B">MULTI-CLOUD // FINOPS TRANSIT HIGHWAY</text>
+                  <rect x="225" y="9" width="118" height="17" rx="8.5" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1" />
+                  <circle cx="234" cy="17.5" r="3" fill="#D97706" />
+                  <text x="242" y="20.5" font-size="7.5" font-weight="700" fill="#D97706" font-family="'JetBrains Mono', monospace">SAVINGS: -34.8% RUN</text>
+
+                  <!-- Cloud 1 (Top Left): AWS Enterprise Landing Zone -->
+                  <rect x="16" y="36" width="136" height="72" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.8" />
+                  <rect x="24" y="44" width="62" height="18" rx="3" fill="#F0F9FF" stroke="#BAE6FD" />
+                  <text x="55" y="56" font-size="8.5" font-weight="800" fill="#0284C7" text-anchor="middle" font-family="'JetBrains Mono', monospace">AWS VPC</text>
+                  <text x="126" y="56" font-size="7.5" font-weight="700" fill="#059669" text-anchor="middle">ACTIVE</text>
+                  <text x="24" y="75" font-size="8" font-weight="700" fill="#0F172A">EKS · EC2 Graviton</text>
+                  <text x="24" y="87" font-size="7.5" fill="#64748B">Aurora RDS · S3 Tiering</text>
+                  <text x="24" y="98" font-size="7" font-weight="700" fill="#0284C7" font-family="'JetBrains Mono', monospace">Spot Arbitrage: ON</text>
+
+                  <!-- Cloud 2 (Top Right): Azure Enterprise Landing Zone -->
+                  <rect x="208" y="36" width="136" height="72" rx="6" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8" />
+                  <rect x="216" y="44" width="76" height="18" rx="3" fill="#EFF6FF" stroke="#BFDBFE" />
+                  <text x="254" y="56" font-size="8.5" font-weight="800" fill="#1E40AF" text-anchor="middle" font-family="'JetBrains Mono', monospace">AZURE FABRIC</text>
+                  <text x="320" y="56" font-size="7.5" font-weight="700" fill="#059669" text-anchor="middle">ACTIVE</text>
+                  <text x="216" y="75" font-size="8" font-weight="700" fill="#0F172A">Synapse SQL · ADLS Gen2</text>
+                  <text x="216" y="87" font-size="7.5" fill="#64748B">Fabric Mesh · AKS Node</text>
+                  <text x="216" y="98" font-size="7" font-weight="700" fill="#1E40AF" font-family="'JetBrains Mono', monospace">Auto-Reserved RI: ON</text>
+
+                  <!-- Central Multi-Cloud Highway Backbone -->
+                  <path d="M 84 108 L 84 136 C 84 145, 96 148, 112 148 L 248 148 C 264 148, 276 145, 276 136 L 276 108" fill="none" stroke="#E2E8F0" stroke-width="12" stroke-linecap="round" />
+                  <path d="M 84 108 L 84 136 C 84 145, 96 148, 112 148 L 248 148 C 264 148, 276 145, 276 136 L 276 108" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4" />
+
+                  <!-- Highway Flow Lines -->
+                  <path d="M 80 108 L 80 136 C 80 143, 92 146, 108 146 L 252 146 C 268 146, 280 143, 280 136 L 280 108" fill="none" stroke="#0284C7" stroke-width="2" class="animate-flow" />
+                  <path d="M 88 108 L 88 136 C 88 147, 100 150, 116 150 L 244 150 C 260 150, 272 147, 272 136 L 272 108" fill="none" stroke="#1E40AF" stroke-width="2" class="animate-flow-reverse" />
+
+                  <!-- FinOps Control Plane & Audited Savings Banner -->
+                  <rect x="75" y="140" width="210" height="72" rx="8" fill="#FFFFFF" stroke="#D97706" stroke-width="2" />
+                  <rect x="85" y="148" width="190" height="24" rx="4" fill="#D97706" />
+                  <text x="180" y="164" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">20% – 40% OPEX REDUCTION</text>
+                  <!-- Metrics inside FinOps Card -->
+                  <text x="87" y="187" font-size="8" font-weight="700" fill="#0F172A">WASTE DETECTED: 0.0%</text>
+                  <text x="87" y="199" font-size="7" fill="#64748B">Auto-Rightsizing Active</text>
+                  <text x="273" y="187" font-size="8" font-weight="700" fill="#059669" text-anchor="end">AUDIT: VERIFIED</text>
+                  <text x="273" y="199" font-size="7" fill="#64748B" text-anchor="end">SOC 2 · Zero-Trust IAM</text>
+
+                  <!-- Active Highway Packets -->
+                  <circle r="3" fill="#0284C7">
+                    <animateMotion dur="2.4s" repeatCount="indefinite" path="M 80 108 L 80 136 C 80 143, 92 146, 108 146 L 180 146" />
+                  </circle>
+                  <circle r="3" fill="#1E40AF">
+                    <animateMotion dur="2.4s" repeatCount="indefinite" path="M 280 108 L 280 136 C 280 143, 268 146, 252 146 L 180 146" />
+                  </circle>
+                  <circle r="3" fill="#D97706">
+                    <animateMotion dur="2s" repeatCount="indefinite" path="M 180 146 L 112 146 C 96 146, 84 145, 84 136 L 84 108" />
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- THE OPERATIONAL DIAGNOSTIC: THE BUSYWORK IS THE BOTTLENECK                -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-white border-b border-brand-border" id="diagnostic">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Structural Reality</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-ink tracking-tight mb-6">
+            The busywork is the bottleneck.
+          </h2>
+          <p class="text-lg text-brand-muted leading-relaxed">
+            Most teams we meet aren't short on tools. They're short on connective tissue. Leads sit in a form for two days before anyone calls. The CRM is half-filled because updating it is a chore. Someone rebuilds the same report every Monday morning.
+          </p>
+          <p class="text-base text-brand-muted mt-3 leading-relaxed">
+            None of that is a technology problem. It's an integration and design problem — the kind that quietly costs you deals every month without ever becoming urgent enough to fix. <strong class="text-brand-ink">That's the work we do.</strong>
+          </p>
+        </div>
+
+        <!-- Side-by-Side Comparison Diagnostic -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Traditional Big-Firm Trap -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-6">
+                <span class="w-7 h-7 rounded-full bg-red-100 text-red-600 font-bold flex items-center justify-center text-sm">✕</span>
+                <h3 class="font-bold text-xl text-brand-ink">The Traditional Big-Firm Model</h3>
+              </div>
+              <ul class="space-y-4 text-sm text-brand-muted">
+                <li class="p-4 rounded-xl bg-white border border-slate-200">
+                  <strong class="text-red-600 block mb-1">Junior Roster Bait-and-Switch:</strong>
+                  Senior partners pitch the deck, then hand off your production ERP or data pipelines to first-year analysts learning on your budget.
+                </li>
+                <li class="p-4 rounded-xl bg-white border border-slate-200">
+                  <strong class="text-red-600 block mb-1">Incentivized Friction & Billable Hours:</strong>
+                  Slow delivery models designed to stretch 3-month projects into multi-year contracts with redundant change management boards.
+                </li>
+                <li class="p-4 rounded-xl bg-white border border-slate-200">
+                  <strong class="text-red-600 block mb-1">Vendor Dependency Trap:</strong>
+                  Black-box deliverables that prevent your internal team from adapting or maintaining workflows without renewing retainers.
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-slate-200 text-xs font-mono text-red-600">
+              Outcome: Prolonged delivery, bloated billing, persistent friction
+            </div>
+          </div>
+
+          <!-- The AARK Senior Precision Model -->
+          <div class="p-8 rounded-2xl bg-blue-50/50 border-2 border-brand-blue flex flex-col justify-between relative shadow-lg">
+            <div class="absolute -top-3 right-6 bg-brand-blue text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              The AARK Standard
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-6">
+                <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">✓</span>
+                <h3 class="font-bold text-xl text-brand-ink">The AARK Senior Precision Model</h3>
+              </div>
+              <ul class="space-y-4 text-sm text-brand-ink">
+                <li class="p-4 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <strong class="text-brand-blue block mb-1">100% Principal Practitioners:</strong>
+                  Zero junior delegates. You work directly with architects who have 15+ years of production experience in Oracle, Cloud, and Data systems.
+                </li>
+                <li class="p-4 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <strong class="text-brand-blue block mb-1">Production in Weeks, Not Quarters:</strong>
+                  We deploy working software in 4 to 8 weeks through agile sprint batches, eliminating months of speculative PowerPoint decks.
+                </li>
+                <li class="p-4 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <strong class="text-brand-blue block mb-1">Clean Source Code & Autonomous Hand-off:</strong>
+                  Full IP transfer, clean documentation, and thorough training so your internal engineers maintain 100% sovereignty.
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-blue-200 text-xs font-mono text-brand-blue font-semibold">
+              Outcome: Rapid capital recovery, high ROI, complete internal autonomy
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- INTERACTIVE ROI & TIME SAVED CALCULATOR WITH SVG GAUGE                    -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-brand-canvas border-b border-brand-border" id="calculator">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Financial Justification Engine</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-ink tracking-tight mb-4">
+            Interactive Enterprise Value Calculator
+          </h2>
+          <p class="text-lg text-brand-muted">
+            Quantify the exact capital and employee hours drained every week by manual spreadsheets, repetitive reconciliation, and fragmented systems.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls Panel (7 Cols) -->
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-brand-border p-8 shadow-sm space-y-8">
+            
+            <!-- Quick Team Presets -->
+            <div>
+              <span class="text-xs uppercase font-bold text-brand-muted tracking-wider block mb-2">Quick Scale Presets:</span>
+              <div class="flex flex-wrap gap-2">
+                <button onclick="setPreset(12, 6, 45)" class="px-3 py-1.5 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-brand-ink transition-colors">
+                  Mid-Market Core (12 staff · 6 hrs)
+                </button>
+                <button onclick="setPreset(35, 8, 75)" class="px-3 py-1.5 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-brand-ink transition-colors">
+                  Regional Enterprise (35 staff · 8 hrs)
+                </button>
+                <button onclick="setPreset(80, 10, 95)" class="px-3 py-1.5 text-xs font-semibold rounded bg-slate-100 hover:bg-slate-200 text-brand-ink transition-colors">
+                  Large Division (80 staff · 10 hrs)
+                </button>
+              </div>
+            </div>
+
+            <!-- Slider 1: Team Size -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="input-team" class="font-bold text-brand-ink text-sm sm:text-base">
+                  Team Members Performing Manual Data Entry / Sync
+                </label>
+                <span id="label-team" class="font-mono font-bold text-brand-blue text-lg">12 people</span>
+              </div>
+              <input id="input-team" type="range" min="3" max="150" step="1" value="12" class="w-full" />
+              <div class="flex justify-between text-xs text-brand-muted mt-1 font-mono">
+                <span>3 staff</span>
+                <span>75 staff</span>
+                <span>150 staff</span>
+              </div>
+            </div>
+
+            <!-- Slider 2: Hours Lost -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="input-hours" class="font-bold text-brand-ink text-sm sm:text-base">
+                  Hours Lost per Person Weekly (Reporting & Rebuilding)
+                </label>
+                <span id="label-hours" class="font-mono font-bold text-brand-blue text-lg">6 hrs / wk</span>
+              </div>
+              <input id="input-hours" type="range" min="2" max="25" step="1" value="6" class="w-full" />
+              <div class="flex justify-between text-xs text-brand-muted mt-1 font-mono">
+                <span>2 hrs (Light)</span>
+                <span>12 hrs (Fragmented)</span>
+                <span>25 hrs (Severe)</span>
+              </div>
+            </div>
+
+            <!-- Slider 3: Hourly Cost -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="input-rate" class="font-bold text-brand-ink text-sm sm:text-base">
+                  Average Fully Loaded Hourly Rate ($ / hour)
+                </label>
+                <span id="label-rate" class="font-mono font-bold text-brand-blue text-lg">$45 / hr</span>
+              </div>
+              <input id="input-rate" type="range" min="30" max="200" step="5" value="45" class="w-full" />
+              <div class="flex justify-between text-xs text-brand-muted mt-1 font-mono">
+                <span>$30/hr</span>
+                <span>$115/hr</span>
+                <span>$200/hr</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-brand-border text-xs text-brand-muted">
+              <strong>Calculation Benchmark:</strong> Models a conservative 52-week operating year with a 60% automation recapture rate based on audited AARK enterprise client deployments.
+            </div>
+          </div>
+
+          <!-- Dynamic Output Card with SVG Gauge (5 Cols) -->
+          <div class="lg:col-span-5 bg-white rounded-2xl border-2 border-brand-blue p-8 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-4 mb-6 border-b border-brand-border">
+                <span class="text-xs uppercase font-bold tracking-wider text-brand-muted">Annual Financial Recovery</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  RECOVERABLE
+                </span>
+              </div>
+
+              <!-- Main Recoverable Dollar Display -->
+              <div class="mb-6">
+                <div class="text-xs font-bold uppercase tracking-wider text-brand-muted mb-1">Direct Capital Recoverable</div>
+                <div id="stat-annual-cost" class="text-4xl sm:text-5xl font-extrabold text-brand-ink tracking-tight font-display">
+                  $101,088
+                </div>
+                <div class="text-xs text-brand-muted mt-1">Projected annual waste eliminated</div>
+              </div>
+
+              <!-- SVG Animated Gauge -->
+              <div class="py-4 flex items-center justify-center">
+                <svg viewBox="0 0 200 120" class="w-48 h-auto">
+                  <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#E2E8F0" stroke-width="14" stroke-linecap="round"/>
+                  <path id="gauge-path" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#1E40AF" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="150" class="transition-all duration-300"/>
+                  <text x="100" y="85" font-size="20" font-weight="bold" fill="#0F172A" text-anchor="middle" id="gauge-percent">60%</text>
+                  <text x="100" y="105" font-size="9" fill="#64748B" text-anchor="middle">HOURS CAPTURED</text>
+                </svg>
+              </div>
+
+              <!-- Sub Metrics -->
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-border mb-6">
+                <div class="p-3 bg-slate-50 rounded-lg">
+                  <div class="text-xs text-brand-muted">Reclaimed Hours</div>
+                  <div id="stat-hours" class="text-xl font-extrabold text-brand-ink">2,246 hrs/yr</div>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg">
+                  <div class="text-xs text-brand-muted">Target Payback</div>
+                  <div id="stat-payback" class="text-xl font-extrabold text-brand-blue">&lt; 60 Days</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="w-full py-3.5 px-4 rounded-lg bg-brand-blue hover:bg-brand-blueHover text-white text-sm font-semibold text-center transition-all shadow-sm flex items-center justify-center gap-2">
+              <span>Lock In This ROI Model in Your Audit</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ENGAGEMENT MODELS (THREE DISTINCT TIERS)                                  -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-white border-b border-brand-border" id="engagement">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Delivery Structure</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-ink tracking-tight mb-4">
+            Engagement models that fit reality
+          </h2>
+          <p class="text-lg text-brand-muted">
+            Some clients need a full project delivered under fixed terms. Some need a two-week roadmap sprint. We will tell you which one your situation calls for.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Tier 1 -->
+          <div class="p-8 rounded-2xl bg-brand-canvas border border-brand-border flex flex-col justify-between hover:border-brand-blue transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-brand-muted uppercase">Model 01</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-white border border-brand-border text-brand-ink">Fixed Scope</span>
+              </div>
+              <h3 class="font-extrabold text-2xl text-brand-ink mb-2">Project Delivery</h3>
+              <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                We scope the work, agree a price, and build it. You get working software, documentation, and a clean handover. Fixed scope and fixed price, so there is no meter running.
+              </p>
+              <div class="space-y-3 pt-4 border-t border-brand-border text-xs text-brand-ink mb-6">
+                <div><span class="text-brand-muted">Timeline:</span> 4 to 12 Weeks</div>
+                <div><span class="text-brand-muted">Best for:</span> When you know what needs building</div>
+                <div><span class="text-brand-muted">Outcome:</span> Full production code and source IP transfer</div>
+              </div>
+            </div>
+            <a href="#contact" class="w-full text-center py-2.5 px-4 rounded-lg bg-white border border-brand-border text-sm font-semibold hover:border-brand-blue transition-colors">
+              Scope a Project
+            </a>
+          </div>
+
+          <!-- Tier 2 (Highlighted) -->
+          <div class="p-8 rounded-2xl bg-blue-50/40 border-2 border-brand-blue flex flex-col justify-between relative shadow-md">
+            <div class="absolute -top-3 right-6 bg-brand-blue text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Most Popular
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-brand-blue uppercase">Model 02</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-200">Fast Direction</span>
+              </div>
+              <h3 class="font-extrabold text-2xl text-brand-ink mb-2">Architecture Sprint</h3>
+              <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                A short engagement to map your systems, locate the expensive manual work, and hand you a prioritized plan with cost and time estimates. Build it yourself, hire someone else, or hire us.
+              </p>
+              <div class="space-y-3 pt-4 border-t border-blue-200 text-xs text-brand-ink mb-6">
+                <div><span class="text-brand-muted">Timeline:</span> 2 to 4 Weeks</div>
+                <div><span class="text-brand-muted">Best for:</span> When you need a validated direction first</div>
+                <div><span class="text-brand-muted">Outcome:</span> Board-ready architectural roadmap & risk matrix</div>
+              </div>
+            </div>
+            <a href="#contact" class="w-full text-center py-2.5 px-4 rounded-lg bg-brand-blue text-white text-sm font-semibold hover:bg-brand-blueHover transition-colors">
+              Book Advisory Sprint
+            </a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="p-8 rounded-2xl bg-brand-canvas border border-brand-border flex flex-col justify-between hover:border-brand-blue transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-brand-muted uppercase">Model 03</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-white border border-brand-border text-brand-ink">Embedded Staff</span>
+              </div>
+              <h3 class="font-extrabold text-2xl text-brand-ink mb-2">Staff Augmentation</h3>
+              <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                Experienced engineers, data specialists, and project managers embedded in your team monthly. They report to your leads, work in your process, and leave when the work is done.
+              </p>
+              <div class="space-y-3 pt-4 border-t border-brand-border text-xs text-brand-ink mb-6">
+                <div><span class="text-brand-muted">Timeline:</span> Monthly / Quarterly commits</div>
+                <div><span class="text-brand-muted">Best for:</span> Augmenting internal capacity quickly</div>
+                <div><span class="text-brand-muted">Outcome:</span> Immediate velocity multiplier without hiring delay</div>
+              </div>
+            </div>
+            <a href="#contact" class="w-full text-center py-2.5 px-4 rounded-lg bg-white border border-brand-border text-sm font-semibold hover:border-brand-blue transition-colors">
+              Request Staff Embedding
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- INTERACTIVE FAQ ACCORDIONS WITH SEARCH                                     -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-brand-canvas border-b border-brand-border" id="faq">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Direct Answers</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-ink tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-brand-muted">
+            Honest answers regarding who hires us, vendor independence, and how we protect proprietary data.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div class="bg-white border border-brand-border rounded-xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq('faq-1')">
+            <div class="flex items-center justify-between font-bold text-brand-ink text-base">
+              <span>Who typically engages AARK Innovations?</span>
+              <span id="icon-faq-1" class="text-brand-blue font-mono font-bold text-lg">+</span>
+            </div>
+            <div id="faq-1" class="hidden mt-3 text-sm text-brand-muted leading-relaxed pt-3 border-t border-slate-100">
+              Usually a VP of Sales, a COO, or a founder who realizes their team is spending too much time moving data between systems. They have revenue goals to hit and know that hiring more people to do manual data entry won't scale.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-white border border-brand-border rounded-xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq('faq-2')">
+            <div class="flex items-center justify-between font-bold text-brand-ink text-base">
+              <span>Do you only work with Oracle, AWS and specific vendors?</span>
+              <span id="icon-faq-2" class="text-brand-blue font-mono font-bold text-lg">+</span>
+            </div>
+            <div id="faq-2" class="hidden mt-3 text-sm text-brand-muted leading-relaxed pt-3 border-t border-slate-100">
+              No. We work across the modern stack. We frequently build on top of HubSpot, Salesforce, Snowflake, Databricks, AWS, Azure, and Google Cloud, connecting them via tools like Make, Zapier, or custom APIs. We focus on the business outcome, not forcing a specific vendor.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-white border border-brand-border rounded-xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq('faq-3')">
+            <div class="flex items-center justify-between font-bold text-brand-ink text-base">
+              <span>How fast do typical engagements move?</span>
+              <span id="icon-faq-3" class="text-brand-blue font-mono font-bold text-lg">+</span>
+            </div>
+            <div id="faq-3" class="hidden mt-3 text-sm text-brand-muted leading-relaxed pt-3 border-t border-slate-100">
+              Most initial engagements take between 4 and 8 weeks to get into production. We prefer shipping small, highly valuable automations quickly rather than spending six months building a monolithic system before you see value.
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="bg-white border border-brand-border rounded-xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq('faq-4')">
+            <div class="flex items-center justify-between font-bold text-brand-ink text-base">
+              <span>How do you protect proprietary data with enterprise AI?</span>
+              <span id="icon-faq-4" class="text-brand-blue font-mono font-bold text-lg">+</span>
+            </div>
+            <div id="faq-4" class="hidden mt-3 text-sm text-brand-muted leading-relaxed pt-3 border-t border-slate-100">
+              Yes. We never train public models on your proprietary data. We use enterprise-grade endpoints and architectures (like Retrieval-Augmented Generation) where your data stays strictly within your tenant boundary and respects your existing permission models.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- EXECUTIVE CONSULTATION INTAKE FORM                                        -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-white" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left Info (5 Cols) -->
+          <div class="lg:col-span-5">
+            <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Direct Working Session</div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-ink tracking-tight mb-4">
+              Let's talk about the bottleneck.
+            </h2>
+            <p class="text-brand-muted text-base leading-relaxed mb-8">
+              Fill out the form to open a ready-to-send email in your email app. No pitch, just a direct look at your systems and an honest answer about whether we can help.
+            </p>
+
+            <div class="space-y-4 text-sm text-brand-muted">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-50 text-brand-blue font-bold flex items-center justify-center">✉</span>
+                <a href="mailto:hello@aarkinn.com" class="font-semibold text-brand-ink hover:text-brand-blue">hello@aarkinn.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-50 text-brand-blue font-bold flex items-center justify-center">📍</span>
+                <span>Fort Mill, SC · Charlotte & the Carolinas Corridor</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-50 text-brand-blue font-bold flex items-center justify-center">🛡</span>
+                <span>Mutual NDA executed prior to discovery sessions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form (7 Cols) -->
+          <div class="lg:col-span-7 bg-brand-canvas border-2 border-brand-border rounded-2xl p-8 sm:p-10 shadow-lg">
+            <form id="contact-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-brand-ink mb-1.5">Full Name *</label>
+                  <input id="input-name" required type="text" placeholder="Sarah Jenkins" class="w-full bg-white border border-brand-border rounded-lg px-4 py-2.5 text-sm text-brand-ink focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-brand-ink mb-1.5">Corporate Work Email *</label>
+                  <input id="input-email" required type="email" placeholder="sarah@enterprise.com" class="w-full bg-white border border-brand-border rounded-lg px-4 py-2.5 text-sm text-brand-ink focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-brand-ink mb-1.5">Company Name *</label>
+                  <input id="input-company" required type="text" placeholder="Apex Logistics" class="w-full bg-white border border-brand-border rounded-lg px-4 py-2.5 text-sm text-brand-ink focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-brand-ink mb-1.5">Your Role</label>
+                  <input id="input-role" type="text" placeholder="VP of Operations / CTO" class="w-full bg-white border border-brand-border rounded-lg px-4 py-2.5 text-sm text-brand-ink focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-brand-ink mb-1.5">What is slowing your team down? *</label>
+                <textarea id="input-message" required rows="4" placeholder="We spend hours every week manually copying leads and syncing Oracle ERP data..." class="w-full bg-white border border-brand-border rounded-lg px-4 py-2.5 text-sm text-brand-ink focus:border-brand-blue focus:ring-1 focus:ring-brand-blue"></textarea>
+              </div>
+
+              <div class="flex items-center gap-2 text-xs text-brand-muted">
+                <input id="check-roi" type="checkbox" checked class="rounded border-brand-border text-brand-blue focus:ring-brand-blue" />
+                <label for="check-roi">Include estimated ROI & hours saved projection from calculator</label>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-lg bg-brand-blue hover:bg-brand-blueHover text-white font-semibold shadow-sm transition-all flex items-center justify-center gap-2">
+                <span>Prepare Working Session Email Draft</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+
+              <div id="form-feedback" class="hidden p-3.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold text-center">
+                Email draft prepared! Opening your mail application to send to hello@aarkinn.com...
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Corporate Footer -->
+  <footer class="bg-brand-ink text-slate-300 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded bg-brand-blue text-white font-bold flex items-center justify-center text-sm">A</div>
+            <span class="font-bold text-white text-lg">AARK Innovations</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Enterprise systems that run your business. Strategic consulting across Oracle ERP, Data & AI, AWS, and Azure.
+          </p>
+          <div class="text-xs text-slate-400">
+            Fort Mill, SC · Charlotte & the Carolinas
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-4">Practices</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#practices" class="hover:text-white transition-colors">Oracle ERP Modernization</a></li>
+            <li><a href="#practices" class="hover:text-white transition-colors">Data & AI Transformation</a></li>
+            <li><a href="#practices" class="hover:text-white transition-colors">Cloud & Lakehouse Platforms</a></li>
+            <li><a href="#practices" class="hover:text-white transition-colors">FinOps & Cloud Rightsizing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-4">Platforms</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#ecosystem" class="hover:text-white transition-colors">Oracle Fusion Cloud & EBS</a></li>
+            <li><a href="#ecosystem" class="hover:text-white transition-colors">Databricks Unity Catalog</a></li>
+            <li><a href="#ecosystem" class="hover:text-white transition-colors">Snowflake Data Cloud</a></li>
+            <li><a href="#ecosystem" class="hover:text-white transition-colors">AWS & Microsoft Azure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-4">Governance</h4>
+          <div class="space-y-2 text-xs text-slate-400">
+            <div class="p-2 rounded bg-slate-800 border border-slate-700 flex items-center gap-2 text-slate-200">
+              <span class="text-emerald-400">✓</span> SOC 2 Type II Aligned
+            </div>
+            <div class="p-2 rounded bg-slate-800 border border-slate-700 flex items-center gap-2 text-slate-200">
+              <span class="text-emerald-400">✓</span> ISO 27001 Protocol
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          © 2026 AARK Innovations. All rights reserved. Fort Mill, SC.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <span>·</span>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <span>·</span>
+          <span>hello@aarkinn.com</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- CLIENT INTERACTION SCRIPTS (ROI CALC, SVG SELECTOR, FAQ, FORM)            -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // 2. Interactive SVG Node Selection
+    const nodeTelemetryMap = {
+      'Oracle Fusion ERP': { telem: 'ONLINE · 12ms · 480 tx/s', color: '#059669' },
+      'AWS & Azure Landing Zones': { telem: 'ACTIVE VPC · 6ms · 2.4 Gbps', color: '#0284C7' },
+      'AARK Central Integration Hub': { telem: '100% OPERATIONAL · <4ms p99 · 18.5k msg/s', color: '#1E40AF' },
+      'Databricks & Snowflake Lakehouse': { telem: 'STREAMING · 0.38s query · 185 MB/s', color: '#0284C7' },
+      'Autonomous AI Agents': { telem: 'INFERENCE LIVE · 52 tokens/s · 99.6% accuracy', color: '#059669' }
+    };
+
+    function selectNode(title, desc, telemetry, statusColor) {
+      const titleEl = document.getElementById('node-title');
+      const descEl = document.getElementById('node-desc');
+      const telemEl = document.getElementById('node-telemetry');
+      const pulseEl = document.getElementById('node-pulse');
+      if (titleEl) {
+        titleEl.textContent = title;
+      }
+      if (descEl) {
+        descEl.textContent = desc;
+      }
+      const t = telemetry || (nodeTelemetryMap[title] && nodeTelemetryMap[title].telem);
+      const c = statusColor || (nodeTelemetryMap[title] && nodeTelemetryMap[title].color);
+      if (telemEl && t) {
+        telemEl.textContent = t;
+      }
+      if (pulseEl && c) {
+        pulseEl.style.backgroundColor = c;
+      }
+    }
+
+    // 3. Dynamic Interactive ROI Calculator
+    const inputTeam = document.getElementById('input-team');
+    const inputHours = document.getElementById('input-hours');
+    const inputRate = document.getElementById('input-rate');
+
+    const labelTeam = document.getElementById('label-team');
+    const labelHours = document.getElementById('label-hours');
+    const labelRate = document.getElementById('label-rate');
+
+    const statCost = document.getElementById('stat-annual-cost');
+    const statHours = document.getElementById('stat-hours');
+    const statPayback = document.getElementById('stat-payback');
+    const gaugePath = document.getElementById('gauge-path');
+
+    function calculateROI() {
+      if (!inputTeam || !inputHours || !inputRate) return;
+      const team = parseInt(inputTeam.value, 10);
+      const hours = parseInt(inputHours.value, 10);
+      const rate = parseInt(inputRate.value, 10);
+
+      labelTeam.textContent = team + ' people';
+      labelHours.textContent = hours + ' hrs / wk';
+      labelRate.textContent = '$' + rate + ' / hr';
+
+      // 52 operating weeks, 60% automation recovery capture
+      const annualLostHours = team * hours * 52;
+      const reclaimedHours = Math.round(annualLostHours * 0.60);
+      const annualSavings = Math.round(reclaimedHours * rate);
+
+      statCost.textContent = '$' + annualSavings.toLocaleString();
+      statHours.textContent = reclaimedHours.toLocaleString() + ' hrs/yr';
+
+      // Payback horizon
+      if (annualSavings > 350000) {
+        statPayback.textContent = '< 30 Days';
+      } else if (annualSavings > 120000) {
+        statPayback.textContent = '< 60 Days';
+      } else {
+        statPayback.textContent = '< 90 Days';
+      }
+
+      // Update SVG gauge arc
+      if (gaugePath) {
+        // max arc length is 251.2
+        const ratio = Math.min(1, Math.max(0.15, annualSavings / 500000));
+        const offset = 251.2 * (1 - ratio);
+        gaugePath.style.strokeDashoffset = offset;
+      }
+    }
+
+    function setPreset(team, hours, rate) {
+      if (inputTeam && inputHours && inputRate) {
+        inputTeam.value = team;
+        inputHours.value = hours;
+        inputRate.value = rate;
+        calculateROI();
+      }
+    }
+
+    if (inputTeam) inputTeam.addEventListener('input', calculateROI);
+    if (inputHours) inputHours.addEventListener('input', calculateROI);
+    if (inputRate) inputRate.addEventListener('input', calculateROI);
+    calculateROI();
+
+    // 4. Accordion Toggle
+    function toggleFaq(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      if (!el || !icon) return;
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        icon.textContent = '−';
+      } else {
+        el.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
+
+    // 5. Contact Form Submission with mailto
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('input-name').value;
+        const email = document.getElementById('input-email').value;
+        const company = document.getElementById('input-company').value;
+        const role = document.getElementById('input-role').value || 'Not specified';
+        const message = document.getElementById('input-message').value;
+        const includeRoi = document.getElementById('check-roi').checked;
+
+        let roiBrief = '';
+        if (includeRoi && statCost && statHours) {
+          roiBrief = `\n[Calculated Operational Impact: Recoverable $${statCost.textContent} / year | Reclaimed ${statHours.textContent}]`;
+        }
+
+        const subject = encodeURIComponent(`Website Inquiry from ${name} at ${company}`);
+        const body = encodeURIComponent(
+          `Name: ${name}\n` +
+          `Email: ${email}\n` +
+          `Company: ${company}\n` +
+          `Role: ${role}\n` +
+          `${roiBrief}\n\n` +
+          `What is slowing the team down:\n${message}\n\n` +
+          `---\nInquiry generated from AARK Innovations Web Portal`
+        );
+
+        const feedback = document.getElementById('form-feedback');
+        if (feedback) feedback.classList.remove('hidden');
+
+        setTimeout(() => {
+          window.location.href = `mailto:hello@aarkinn.com?subject=${subject}&body=${body}`;
+        }, 500);
+      });
+    }
+  </script>
+</body>
+</html>

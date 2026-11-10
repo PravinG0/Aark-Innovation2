@@ -1,0 +1,155 @@
+{
+  "brand": {
+    "name": "AARK Innovations",
+    "domain": "aarkinn.com",
+    "email": "hello@aarkinn.com",
+    "location": "Fort Mill, SC. Working across Charlotte and the Carolinas.",
+    "tagline": "Enterprise systems that run your business, not the other way around."
+  },
+  "hero": {
+    "headline": "Enterprise systems that run your business, not the other way around.",
+    "description": "AARK Innovations is a premier consulting firm helping mid-market and enterprise teams modernise how they operate — from Oracle ERP implementations to Data & AI platforms on AWS, Microsoft Azure, Databricks and Snowflake. Senior consultants, accountable delivery, measurable outcomes.",
+    "cta_primary": {
+      "text": "Book a 30-minute working session",
+      "href": "#contact"
+    },
+    "cta_secondary": {
+      "text": "Explore our consulting practices",
+      "href": "#practices"
+    }
+  },
+  "metrics": [
+    {
+      "value": "20+",
+      "label": "Hours a week returned to a typical client team"
+    },
+    {
+      "value": "4-8 wks",
+      "label": "Average time to first automation in production"
+    },
+    {
+      "value": "15+",
+      "label": "Years of combined cloud and data delivery"
+    },
+    {
+      "value": "100%",
+      "label": "Work delivered by the senior people you meet"
+    }
+  ],
+  "practices": [
+    {
+      "tag": "01",
+      "title": "Oracle ERP Services",
+      "blurb": "Implementation, upgrade and managed support for Oracle Fusion Cloud ERP and E-Business Suite — Financials, Procurement, Supply Chain, Projects and HCM.",
+      "items": [
+        "Fusion Cloud ERP implementations and rollouts",
+        "EBS to Fusion Cloud migrations",
+        "Integrations with OIC, APIs and middleware",
+        "Reporting with OTBI, BI Publisher and FAW",
+        "Post go-live managed support"
+      ]
+    },
+    {
+      "tag": "02",
+      "title": "Data & AI",
+      "blurb": "Trustworthy data foundations and AI that is grounded in your own business — from pipelines and warehouses to assistants, forecasting and document automation.",
+      "items": [
+        "Lakehouse and warehouse builds on Databricks and Snowflake",
+        "Pipelines, data quality and governance",
+        "Dashboards and self-serve analytics",
+        "GenAI assistants grounded in your documents",
+        "ML models with evaluation and guardrails"
+      ]
+    },
+    {
+      "tag": "03",
+      "title": "Cloud & Data Platforms",
+      "blurb": "Architecture, migration and cost optimisation across AWS and Microsoft Azure, with Databricks and Snowflake as the analytics layer on top.",
+      "items": [
+        "Landing zones and cloud architecture",
+        "Migration of workloads, databases and ERP",
+        "Databricks and Snowflake platform engineering",
+        "FinOps: cost review and rightsizing",
+        "Security, identity and operations"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Oracle",
+      "abbr": "OR",
+      "sub": "Fusion Cloud ERP · EBS · OCI"
+    },
+    {
+      "name": "AWS",
+      "abbr": "AWS",
+      "sub": "Migration · Data · Serverless"
+    },
+    {
+      "name": "Microsoft Azure",
+      "abbr": "AZ",
+      "sub": "Fabric · Synapse · Integration"
+    },
+    {
+      "name": "Databricks",
+      "abbr": "DB",
+      "sub": "Lakehouse · ML · Unity Catalog"
+    },
+    {
+      "name": "Snowflake",
+      "abbr": "SF",
+      "sub": "Warehouse · Sharing · Cortex"
+    }
+  ],
+  "narrative": {
+    "heading": "The busywork is the bottleneck",
+    "paragraphs": [
+      "Most teams we meet aren't short on tools. They're short on connective tissue. Leads sit in a form for two days before anyone calls. The CRM is half-filled because updating it is a chore. Someone rebuilds the same report every Monday morning. Marketing can't tell which campaigns produced revenue, so budget gets set on instinct.",
+      "None of that is a technology problem. It's an integration and design problem — the kind that quietly costs you deals every month without ever becoming urgent enough to fix.",
+      "That's the work we do. We get the ERP and data foundations right, automate the manual work around them, then put AI on top. Skipping to the last step is why most AI projects stall."
+    ]
+  },
+  "engagement_models": [
+    {
+      "title": "Project delivery",
+      "badge": "Best when you know what needs building",
+      "description": "We scope the work, agree a price, and build it. You get working software, documentation and a clean handover. Fixed scope and fixed price, so there's no meter running."
+    },
+    {
+      "title": "Advisory & Architecture Sprint",
+      "badge": "Best when you need a direction first",
+      "description": "A short engagement to map your systems, find the expensive manual work and hand you a prioritised plan with cost and time estimates. Build it yourself, hire someone else, or hire us."
+    },
+    {
+      "title": "Staff augmentation",
+      "badge": "Best for augmenting existing capacity",
+      "description": "Experienced engineers, data specialists and project managers embedded in your team monthly. They report to your leads, work in your process, and leave when the work is done."
+    }
+  ],
+  "calculator": {
+    "title": "Interactive ROI & Time Saved Calculator",
+    "fields": [
+      { "id": "team_size", "label": "Team Members Doing Manual Reporting/Sync", "default": 12 },
+      { "id": "hours_lost", "label": "Hours Lost per Person Weekly", "default": 6 },
+      { "id": "hourly_rate", "label": "Average Fully Loaded Hourly Cost ($)", "default": 45 }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Who typically engages you?",
+      "a": "Usually a VP of Sales, a COO, or a founder who realises their team is spending too much time moving data between systems. They have revenue goals to hit and know that hiring more people to do manual data entry won't scale."
+    },
+    {
+      "q": "Do you only work with Oracle and specific cloud vendors?",
+      "a": "No. We work across the modern stack. We frequently build on top of HubSpot, Salesforce, Snowflake, Databricks, AWS, Azure, and Google Cloud, connecting them via tools like Make, Zapier, or custom APIs. We focus on the business outcome, not forcing a specific vendor."
+    },
+    {
+      "q": "How fast do engagements move?",
+      "a": "Most initial engagements take between 4 and 8 weeks to get into production. We prefer shipping small, highly valuable automations quickly rather than spending six months building a monolithic system before you see value."
+    },
+    {
+      "q": "How do you protect proprietary data with AI?",
+      "a": "Yes. We never train public models on your proprietary data. We use enterprise-grade endpoints and architectures (like Retrieval-Augmented Generation) where your data stays within your tenant boundary and respects your existing permission models."
+    }
+  ]
+}

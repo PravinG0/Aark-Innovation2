@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AARK Innovations | Institutional Enterprise Consulting &amp; AI Modernization</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#001f26",
+            "inverse-primary": "#006c49",
+            "on-secondary-fixed-variant": "#004395",
+            "on-primary": "#003824",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#002113",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "primary-fixed": "#6ffbbe",
+            "surface-bright": "#353942",
+            "primary": "#4edea3",
+            "outline-variant": "#3c4a42",
+            "tertiary-fixed": "#acedff",
+            "outline": "#86948a",
+            "on-error": "#690005",
+            "on-primary-container": "#00422b",
+            "surface-variant": "#31353e",
+            "on-tertiary-container": "#003f4b",
+            "tertiary": "#4cd7f6",
+            "on-surface-variant": "#bbcabf",
+            "secondary": "#adc6ff",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "secondary-container": "#0566d9",
+            "inverse-surface": "#dfe2ee",
+            "on-secondary": "#002e6a",
+            "surface-tint": "#4edea3",
+            "surface-container": "#1c2028",
+            "on-tertiary": "#003640",
+            "inverse-on-surface": "#2c3039",
+            "tertiary-container": "#00b2d0",
+            "on-error-container": "#ffdad6",
+            "surface-container-high": "#262a33",
+            "secondary-fixed-dim": "#adc6ff",
+            "on-background": "#dfe2ee",
+            "surface-container-lowest": "#0a0e16",
+            "on-surface": "#dfe2ee",
+            "surface-container-low": "#181c24",
+            "surface-container-highest": "#31353e",
+            "error": "#ffb4ab",
+            "surface-dim": "#0f131c",
+            "secondary-fixed": "#d8e2ff",
+            "primary-container": "#10b981",
+            "primary-fixed-dim": "#4edea3",
+            "surface": "#0f131c",
+            "on-primary-fixed-variant": "#005236",
+            "on-secondary-container": "#e6ecff",
+            "background": "#0f131c",
+            "on-secondary-fixed": "#001a42"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "gutter-desktop": "2rem",
+            "margin-desktop": "3rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Inter"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "label-code": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-metric": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "label-code": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-metric": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Subtle custom backdrop glowing gradients */
+    .mesh-gradient-bg {
+      background: radial-gradient(circle at 18% 12%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 82% 28%, rgba(59, 130, 246, 0.07) 0%, transparent 50%),
+                  radial-gradient(circle at 50% 75%, rgba(6, 182, 212, 0.05) 0%, transparent 45%);
+    }
+    input[type=range]::-webkit-slider-thumb {
+      appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 9999px;
+      background: #4edea3;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(78, 222, 163, 0.6);
+      border: 2px solid #0f131c;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-x-hidden mesh-gradient-bg font-body-md">
+<!-- TOP NAVIGATION BAR (Shared Component Anchor) -->
+<header class="sticky top-4 z-50 mx-auto w-[calc(100%-2rem)] max-w-7xl rounded-full bg-surface-container/80 backdrop-blur-md border border-outline-variant/30 shadow-2xl shadow-surface-container-lowest/50">
+<div class="flex justify-between items-center px-space-lg py-space-sm w-full">
+<!-- Brand & Kinetic Emblem -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-container to-tertiary-container flex items-center justify-center p-0.5 shadow-lg shadow-primary-container/20 group-hover:scale-105 transition-transform duration-200">
+<div class="w-full h-full bg-surface-container-lowest rounded-[10px] flex items-center justify-center">
+<span class="text-primary font-headline-sm font-bold tracking-tighter">A</span>
+</div>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface">AARK Innovations</span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors" href="#practices">Practices</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors" href="#ecosystem">Ecosystem</a>
+<a class="text-primary font-label-lg text-label-lg border-b-2 border-primary pb-1" href="#roi-impact">ROI Impact</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors" href="#engagement">Engagement</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors" href="#insights">Insights</a>
+</nav>
+<!-- Right CTAs -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary font-label-lg text-label-lg px-3 py-1.5 rounded-full transition-colors" href="#consultation">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Client Portal</span>
+</a>
+<a class="bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-lg text-label-lg px-4 py-2 rounded-full font-semibold shadow-lg shadow-primary-container/20 hover:brightness-105 active:scale-95 transition-all duration-200 flex items-center gap-2" href="#consultation">
+<span>Schedule Executive Consultation</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- HERO SECTION -->
+<section class="relative pt-16 pb-20 md:pt-24 md:pb-28 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<!-- Glow ambient backdrop -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-64 bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="text-center max-w-4xl mx-auto flex flex-col items-center">
+<!-- Location Pill with live pulse -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-surface-container/70 border border-outline-variant/40 backdrop-blur-md mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-code text-label-code tracking-wider text-on-surface-variant uppercase">Fort Mill, SC · Charlotte &amp; Carolinas</span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-label-code text-label-code">Enterprise AI &amp; Cloud Advisory</span>
+</div>
+<!-- Dominant Headline -->
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface tracking-tight mb-6">
+          Enterprise systems that run your business, <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-secondary">not the other way around.</span>
+</h1>
+<!-- Executive Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-10 leading-relaxed">
+          Architect-level oversight across Oracle Cloud ERP, unified data platforms, and autonomous AI automation. We eliminate junior staff churn to deploy production solutions with institutional precision.
+        </p>
+<!-- Hero CTAs -->
+<div class="flex flex-col sm:flex-row items-center gap-4 justify-center w-full max-w-md mb-16">
+<a class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-lg text-label-lg font-semibold shadow-xl shadow-primary-container/25 hover:brightness-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2" href="#consultation">
+<span>Book an Executive Working Session</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest/80 border border-outline-variant/30 text-on-surface font-label-lg text-label-lg transition-colors text-center flex items-center justify-center gap-2" href="#roi-impact">
+<span>Calculate ROI</span>
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</a>
+</div>
+</div>
+<!-- 4-METRIC GLASS STAT BAR -->
+<div class="w-full max-w-6xl mx-auto rounded-2xl bg-surface-container-low/70 backdrop-blur-xl border border-outline-variant/30 p-4 sm:p-6 shadow-2xl shadow-surface-container-lowest/60">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-outline-variant/20">
+<div class="flex flex-col px-4 text-center lg:text-left">
+<span class="font-label-metric text-label-metric text-primary mb-1">20+ hrs</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Returned per week per team</span>
+<span class="font-label-code text-label-code text-outline mt-1">Manual data &amp; reconciliation relief</span>
+</div>
+<div class="flex flex-col px-4 text-center lg:text-left">
+<span class="font-label-metric text-label-metric text-tertiary mb-1">4–8 wks</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Average time to production</span>
+<span class="font-label-code text-label-code text-outline mt-1">Sprint-driven architecture sprints</span>
+</div>
+<div class="flex flex-col px-4 text-center lg:text-left">
+<span class="font-label-metric text-label-metric text-secondary mb-1">15+ yrs</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Senior architect tenure</span>
+<span class="font-label-code text-label-code text-outline mt-1">Cross-industry enterprise veterans</span>
+</div>
+<div class="flex flex-col px-4 text-center lg:text-left">
+<span class="font-label-metric text-label-metric text-primary-fixed mb-1">100%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Principal &amp; Lead staff only</span>
+<span class="font-label-code text-label-code text-outline mt-1">Zero delegated junior staff billing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SUPPORTED PLATFORMS & ECOSYSTEM -->
+<section class="py-16 border-y border-outline-variant/15 bg-surface-container-lowest/40" id="ecosystem">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Enterprise Alliances &amp; Ecosystem</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-1">Precision Platform Architectures</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+            Certified partner expertise and deep technical mastery across premier enterprise cloud data systems.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Oracle -->
+<div class="group p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container-high/80 border border-outline-variant/25 transition-all duration-200">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm font-headline-sm text-on-surface font-bold text-red-400">ORACLE</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-red-950/60 text-red-300 border border-red-800/40">Cloud ERP</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold mb-1">OCI &amp; NetSuite</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cloud Infrastructure, E-Business Suite modernizations, and Oracle Integration Cloud (OIC).</p>
+</div>
+<!-- AWS -->
+<div class="group p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container-high/80 border border-outline-variant/25 transition-all duration-200">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm font-headline-sm text-on-surface font-bold text-amber-400">AWS</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-amber-950/60 text-amber-300 border border-amber-800/40">Advanced</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold mb-1">Amazon Web Services</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bedrock Generative AI, serverless data lakehouse models, and resilient FinOps foundations.</p>
+</div>
+<!-- Azure -->
+<div class="group p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container-high/80 border border-outline-variant/25 transition-all duration-200">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm font-headline-sm text-on-surface font-bold text-blue-400">AZURE</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-blue-950/60 text-blue-300 border border-blue-800/40">Fabric AI</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold mb-1">Microsoft Azure</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fabric analytics, Synapse pipelines, and zero-leakage Azure OpenAI enterprise workspaces.</p>
+</div>
+<!-- Databricks -->
+<div class="group p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container-high/80 border border-outline-variant/25 transition-all duration-200">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm font-headline-sm text-on-surface font-bold text-orange-400">DATABRICKS</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-orange-950/60 text-orange-300 border border-orange-800/40">Lakehouse</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold mb-1">Lakehouse &amp; Unity</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unity Catalog governance, Delta Live Tables, and distributed model fine-tuning architecture.</p>
+</div>
+<!-- Snowflake -->
+<div class="group p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container-high/80 border border-outline-variant/25 transition-all duration-200">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm font-headline-sm text-on-surface font-bold text-cyan-400">SNOWFLAKE</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-cyan-950/60 text-cyan-300 border border-cyan-800/40">Cortex AI</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold mb-1">Data Warehousing</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cortex LLM functions, secure data clean rooms, and automated cross-region replication.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- THREE PILLARS OF CONSULTING PRACTICES -->
+<section class="py-24 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12" id="practices">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Institutional Advisory Capabilities</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 mb-4">Three Pillars of Enterprise Transformation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We architect, engineer, and deploy high-leverage workflows that eliminate operational bottlenecks and protect capital efficiency.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Pillar 01 -->
+<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/30 p-8 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-metric text-label-metric text-outline-variant group-hover:text-primary transition-colors">01</span>
+<div class="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Oracle ERP Modernization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Transition complex legacy instances into scalable cloud financial operating models with continuous data integrity.
+            </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Financials &amp; Supply Chain Cloud Architecture</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Oracle Integration Cloud (OIC) &amp; REST Pipelines</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Custom VBCS / Extension Development</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Continuous Audit &amp; SOX Automated Controls</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant">Target Velocity:</span>
+<span class="font-label-md text-label-md text-primary font-semibold">90-day core module readiness</span>
+</div>
+</div>
+<!-- Pillar 02 -->
+<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/30 p-8 flex flex-col justify-between hover:border-tertiary/40 transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-metric text-label-metric text-outline-variant group-hover:text-tertiary transition-colors">02</span>
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 border border-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Data &amp; AI Transformation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Turn inert databases into autonomous enterprise cognitive workflows with private LLM orchestration and validation.
+            </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Agentic AI Financial Reconciliation Workflows</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Private Enterprise LLM Fine-Tuning &amp; RAG</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Autonomous Invoice &amp; Multi-format Parsing</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Hallucination Gateways &amp; Data Sandboxing</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant">Target Velocity:</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold">14 days to custom pilot</span>
+</div>
+</div>
+<!-- Pillar 03 -->
+<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/30 p-8 flex flex-col justify-between hover:border-secondary/40 transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-metric text-label-metric text-outline-variant group-hover:text-secondary transition-colors">03</span>
+<div class="w-10 h-10 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">cloud_sync</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Cloud &amp; Lakehouse Platforms</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Build zero-trust multi-cloud pipelines across AWS, Azure, Databricks, and Snowflake with ironclad FinOps governance.
+            </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-Cloud Lakehouse &amp; Fabric Ingestion</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Sub-second Streaming Telemetry Pipelines</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">FinOps Cost Optimization (20-40% savings)</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Zero-Trust Identity &amp; Air-Gapped Compliance</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant">Target Velocity:</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Continuous automated governance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- EXECUTIVE NARRATIVE: THE BUSYWORK IS THE BOTTLENECK -->
+<section class="py-20 bg-surface-container-lowest/60 border-y border-outline-variant/15 relative">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<div class="max-w-3xl mb-12">
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Structural Operational Realities</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 mb-3">The busywork is the bottleneck.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Why multi-million dollar IT initiatives stall: legacy consulting shops pad rosters with junior analysts who practice on your time, producing decks instead of working code.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<!-- Traditional Model -->
+<div class="rounded-2xl p-8 bg-surface-container-low/50 border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+<h4 class="font-headline-sm font-headline-sm text-on-surface">Traditional Consulting Conglomerates</h4>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/15">
+<div class="font-label-md text-label-md text-error mb-1">Junior Roster Bait-and-Switch</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senior partners pitch the proposal, then hand off production architecture to 1st-year analysts learning Oracle or Databricks on your budget.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/15">
+<div class="font-label-md text-label-md text-error mb-1">Incentivized Friction &amp; Billable Hours</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Slow delivery models designed to prolong engagement length with manual validation sprints and redundant change boards.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/15">
+<div class="font-label-md text-label-md text-error mb-1">Vendor Dependency Trap</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Black-box systems leave internal teams unable to maintain or adapt workflows without signing renewed multi-year retainers.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/15 flex items-center justify-between text-outline">
+<span class="font-label-code text-label-code">Outcomes: High churn, prolonged timelines</span>
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+</div>
+<!-- AARK Precision Model -->
+<div class="rounded-2xl p-8 bg-surface-container-high/40 border border-primary/30 flex flex-col justify-between relative shadow-xl shadow-primary/5">
+<div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-code text-[11px] font-bold tracking-wider uppercase">
+              The AARK Standard
+            </div>
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<h4 class="font-headline-sm font-headline-sm text-on-surface">AARK Precision Architecture Model</h4>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container/70 border border-primary/20">
+<div class="font-label-md text-label-md text-primary mb-1">100% Senior Principal Practitioners</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero junior delegates. Every engineer and advisor assigned to your team has 12+ years of institutional architecture experience.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container/70 border border-primary/20">
+<div class="font-label-md text-label-md text-primary mb-1">Production In Weeks, Not Quarters</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We utilize pre-hardened integration modules and automated deployment pipelines, slashing rollout cycles from 9 months to 4-8 weeks.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container/70 border border-primary/20">
+<div class="font-label-md text-label-md text-primary mb-1">Autonomous Team Hand-Off</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete transparent code repos, automated test coverage, and executive enablement documentation to ensure immediate internal independence.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-primary/20 flex items-center justify-between text-primary">
+<span class="font-label-code text-label-code">Outcomes: Rapid capital ROI &amp; operational self-sufficiency</span>
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ROI & TIME SAVED CALCULATOR -->
+<section class="py-24 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12" id="roi-impact">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Financial Justification Engine</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 mb-4">Enterprise Value &amp; ROI Calculator</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Quantify the capital expenditure drain caused by manual reconciliation, fractured ERP data, and slow reporting cycles.
+        </p>
+</div>
+<div class="rounded-3xl bg-surface-container-low/80 backdrop-blur-2xl border border-outline-variant/30 p-8 sm:p-10 shadow-2xl shadow-surface-container-lowest/80">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Controls Panel (Left 7 cols) -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Slider 1: Team Size -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="team-size">Engineering &amp; Operations Team Size</label>
+<span class="font-label-metric text-[22px] text-primary" id="val-team-size">25 professionals</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer focus:outline-none" id="team-size" max="150" min="5" step="1" type="range" value="25"/>
+<div class="flex justify-between font-label-code text-label-code text-outline mt-1.5">
+<span>5 teams</span>
+<span>75 teams</span>
+<span>150+ teams</span>
+</div>
+</div>
+<!-- Slider 2: Hours Lost -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="hours-lost">Weekly Hours Lost per Person (Manual ERP/Data Tasks)</label>
+<span class="font-label-metric text-[22px] text-tertiary" id="val-hours-lost">8 hrs / week</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer focus:outline-none" id="hours-lost" max="25" min="2" step="1" type="range" value="8"/>
+<div class="flex justify-between font-label-code text-label-code text-outline mt-1.5">
+<span>2 hrs (Light)</span>
+<span>12 hrs (Fragmented)</span>
+<span>25 hrs (Severe)</span>
+</div>
+</div>
+<!-- Slider 3: Hourly Cost -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="hourly-cost">Average Fully Burdened Hourly Rate ($/hr)</label>
+<span class="font-label-metric text-[22px] text-secondary" id="val-hourly-cost">$95 / hr</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer focus:outline-none" id="hourly-cost" max="220" min="50" step="5" type="range" value="95"/>
+<div class="flex justify-between font-label-code text-label-code text-outline mt-1.5">
+<span>$50/hr</span>
+<span>$135/hr</span>
+<span>$220/hr</span>
+</div>
+</div>
+<!-- Context badge -->
+<div class="p-4 rounded-xl bg-surface-container/60 border border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Based on audited enterprise automation benchmarks across Oracle Cloud ERP, AWS Bedrock, and Snowflake lakehouse deployments.
+              </p>
+</div>
+</div>
+<!-- Dynamic Output Card (Right 5 cols) -->
+<div class="lg:col-span-5 rounded-2xl bg-gradient-to-br from-surface-container-high/90 to-surface-container/90 border border-outline-variant/40 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-40 h-40 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">Calculated Recovery</span>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-code bg-primary/10 text-primary border border-primary/20">Annual Projected</span>
+</div>
+<!-- Main metric 1 -->
+<div class="mb-6">
+<div class="font-label-md text-label-md text-on-surface-variant mb-1">Capital Waste Recoverable</div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight font-bold" id="display-cost-saved">$988,000</div>
+</div>
+<!-- Metric 2 -->
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20 mb-8">
+<div>
+<div class="font-label-code text-label-code text-outline">Reclaimed Hours</div>
+<div class="font-headline-sm font-headline-sm text-on-surface font-semibold" id="display-hours-saved">10,400 hrs/yr</div>
+</div>
+<div>
+<div class="font-label-code text-label-code text-outline">Target Payback</div>
+<div class="font-headline-sm font-headline-sm text-tertiary font-semibold" id="display-payback">&lt; 45 Days</div>
+</div>
+</div>
+</div>
+<!-- Action -->
+<a class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-lg text-label-lg font-bold text-center hover:brightness-105 transition-all shadow-lg shadow-primary-container/20 flex items-center justify-center gap-2" href="#consultation">
+<span>Lock In Your Custom ROI Model</span>
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ENGAGEMENT MODELS MATRIX -->
+<section class="py-24 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12" id="engagement">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Tailored Delivery Structuring</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 mb-4">Engagement Models Built for Precision</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Choose the exact mode of collaboration suited to your governance, technical maturity, and quarter deadlines.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Model 1 -->
+<div class="rounded-2xl p-7 bg-surface-container/70 border border-outline-variant/30 flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-label-code bg-surface-container-high text-on-surface-variant border border-outline-variant/30">Fixed Deliverable</span>
+<span class="font-label-code text-label-code text-primary font-bold">Model 01</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Turnkey Project Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Full lifecycle design, engineering, and deployment of a targeted enterprise capability under fixed SLA commitments.
+            </p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label-code text-label-code text-outline block">Timeline</span>
+<span class="font-label-md text-label-md text-on-surface">4 to 12 Weeks (Sprint Batches)</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Team Composition</span>
+<span class="font-label-md text-label-md text-on-surface">Lead Solution Architect + 2 Senior Cloud/AI Engineers</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Ideal Enterprise Scenario</span>
+<span class="font-label-md text-label-md text-on-surface">Oracle Cloud Migration, Databricks Unity Catalog Setup, or Agentic AI Pipeline</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-label-code text-label-code text-primary">Outcome: Production deployment &amp; full source code transfer</span>
+</div>
+</div>
+<!-- Model 2 -->
+<div class="rounded-2xl p-7 bg-surface-container-high/60 border border-tertiary/40 flex flex-col justify-between shadow-xl shadow-tertiary/5 relative">
+<div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-tertiary text-on-tertiary-fixed font-label-code text-[11px] font-bold tracking-wider uppercase">
+            Fastest Clarity
+          </div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-label-code bg-tertiary/10 text-tertiary border border-tertiary/20">High-Velocity Audit</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">Model 02</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Executive Advisory Sprint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Rapid multi-dimensional technical audit, security and cloud FinOps review, and detailed C-suite strategic architectural roadmap.
+            </p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label-code text-label-code text-outline block">Timeline</span>
+<span class="font-label-md text-label-md text-on-surface">2 to 4 Weeks</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Team Composition</span>
+<span class="font-label-md text-label-md text-on-surface">Enterprise Managing Architect &amp; Security Director</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Ideal Enterprise Scenario</span>
+<span class="font-label-md text-label-md text-on-surface">Evaluating multi-cloud lakehouses, GenAI readiness, or Oracle upgrade risk</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-label-code text-label-code text-tertiary">Outcome: Defensible board-ready blueprint &amp; risk matrix</span>
+</div>
+</div>
+<!-- Model 3 -->
+<div class="rounded-2xl p-7 bg-surface-container/70 border border-outline-variant/30 flex flex-col justify-between hover:border-secondary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-label-code bg-surface-container-high text-on-surface-variant border border-outline-variant/30">Embedded Leadership</span>
+<span class="font-label-code text-label-code text-secondary font-bold">Model 03</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Embedded Fractional Architects</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Elite principal engineers and architects directly integrated into your existing scrum pods to accelerate roadmap velocity.
+            </p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label-code text-label-code text-outline block">Timeline</span>
+<span class="font-label-md text-label-md text-on-surface">Ongoing Quarterly Commitments</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Team Composition</span>
+<span class="font-label-md text-label-md text-on-surface">Fractional Chief Architect or Principal Data Engineer</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-outline block">Ideal Enterprise Scenario</span>
+<span class="font-label-md text-label-md text-on-surface">Scaling complex data infrastructure without headcount inflation</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-label-code text-label-code text-secondary">Outcome: Force-multiplier mentoring &amp; architectural governance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- EXECUTIVE FAQ & CONSULTATION FORM SECTION -->
+<section class="py-24 bg-surface-container-lowest/50 border-t border-outline-variant/15" id="consultation">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Accordion FAQ (Left 6 cols) -->
+<div class="lg:col-span-6">
+<div class="mb-8">
+<span class="font-label-code text-label-code text-primary uppercase tracking-widest">Executive Inquiry</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 mb-3">Frequently Asked Questions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Direct answers regarding our staffing standards, regional presence in the Carolinas, and data security mandates.
+              </p>
+</div>
+<div class="space-y-4" id="faq-accordion">
+<!-- Item 1 -->
+<div class="rounded-xl border border-outline-variant/30 bg-surface-container/60 overflow-hidden">
+<button class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-variant/30 transition-colors" onclick="toggleFaq('faq-1')">
+<span class="font-label-lg text-label-lg text-on-surface">How do you guarantee that junior staff won't work on our project?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-faq-1">expand_more</span>
+</button>
+<div class="px-5 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/15" id="faq-1">
+                  Our staffing model is legally contract-bound. We only employ and deploy Principal Consultants and Enterprise Architects with a minimum of 12 years in production systems. We do not maintain a junior analyst bench.
+                </div>
+</div>
+<!-- Item 2 -->
+<div class="rounded-xl border border-outline-variant/30 bg-surface-container/60 overflow-hidden">
+<button class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-variant/30 transition-colors" onclick="toggleFaq('faq-2')">
+<span class="font-label-lg text-label-lg text-on-surface">Do you offer on-site collaboration in Charlotte and the Carolinas?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-faq-2">expand_more</span>
+</button>
+<div class="hidden px-5 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/15" id="faq-2">
+                  Yes. Headquartered in Fort Mill, SC, our senior partners and architects frequently work on-site with leadership teams in Uptown Charlotte, Ballantyne, Raleigh-Durham, and throughout the broader Carolinas corridor.
+                </div>
+</div>
+<!-- Item 3 -->
+<div class="rounded-xl border border-outline-variant/30 bg-surface-container/60 overflow-hidden">
+<button class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-variant/30 transition-colors" onclick="toggleFaq('faq-3')">
+<span class="font-label-lg text-label-lg text-on-surface">How do you address AI safety and proprietary data confidentiality?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-faq-3">expand_more</span>
+</button>
+<div class="hidden px-5 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/15" id="faq-3">
+                  We deploy private tenant architecture (AWS Bedrock private VPCs, Azure OpenAI dedicated instances) with zero external logging and air-gapped data pipelines. Your company training data never leaves your enterprise perimeter.
+                </div>
+</div>
+<!-- Item 4 -->
+<div class="rounded-xl border border-outline-variant/30 bg-surface-container/60 overflow-hidden">
+<button class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-variant/30 transition-colors" onclick="toggleFaq('faq-4')">
+<span class="font-label-lg text-label-lg text-on-surface">What is the standard engagement timeline to production value?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-faq-4">expand_more</span>
+</button>
+<div class="hidden px-5 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/15" id="faq-4">
+                  Our Advisory Sprints deliver architectural clarity within 14 business days. Technical project implementations target production delivery milestones between 4 and 8 weeks using sprint-based micro-releases.
+                </div>
+</div>
+</div>
+</div>
+<!-- Glassmorphic Working Session Form (Right 6 cols) -->
+<div class="lg:col-span-6 rounded-3xl bg-surface-container-low/90 backdrop-blur-2xl border border-outline-variant/40 p-8 sm:p-10 shadow-2xl relative">
+<div class="mb-6">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-label-code bg-primary/10 text-primary border border-primary/20">Executive Intake</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mt-2 mb-1">Book an Executive Working Session</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Direct discussion with an Enterprise Principal Architect. No sales gatekeepers.
+              </p>
+</div>
+<form id="consultation-form" class="space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-code text-label-code text-on-surface-variant mb-1">Full Name</label>
+<input id="form-name" class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 text-on-surface placeholder:text-outline focus:border-tertiary focus:ring-1 focus:ring-tertiary font-body-sm text-body-sm" placeholder="Sarah Jenkins" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-code text-label-code text-on-surface-variant mb-1">Corporate Work Email</label>
+<input id="form-email" class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 text-on-surface placeholder:text-outline focus:border-tertiary focus:ring-1 focus:ring-tertiary font-body-sm text-body-sm" placeholder="sjenkins@enterprise.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-code text-label-code text-on-surface-variant mb-1">Company / Organization</label>
+<input id="form-company" class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 text-on-surface placeholder:text-outline focus:border-tertiary focus:ring-1 focus:ring-tertiary font-body-sm text-body-sm" placeholder="Global Logistics Corp" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-code text-label-code text-on-surface-variant mb-1">Primary Modernization Focus</label>
+<select id="form-focus" class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 text-on-surface focus:border-tertiary focus:ring-1 focus:ring-tertiary font-body-sm text-body-sm">
+<option>Oracle Cloud ERP Modernization</option>
+<option>Data &amp; AI Transformation / LLM Ops</option>
+<option>Databricks &amp; Snowflake Lakehouse</option>
+<option>AWS / Azure Multi-Cloud Architecture</option>
+<option>Executive Advisory &amp; FinOps Audit</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-code text-label-code text-on-surface-variant mb-1">Brief Overview of Challenge or Timeline</label>
+<textarea id="form-message" class="w-full p-3.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40 text-on-surface placeholder:text-outline focus:border-tertiary focus:ring-1 focus:ring-tertiary font-body-sm text-body-sm resize-none" placeholder="Current Oracle EBS footprint planning Cloud migration; need private data lakehouse and agentic invoice automation by Q3." rows="3"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-lg text-label-lg font-bold shadow-xl shadow-primary-container/25 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Schedule Executive Consultation</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div id="form-toast" class="hidden p-3 rounded-lg bg-primary/10 border border-primary/30 text-primary font-body-sm text-center">
+  Request prepared! Opening your mail client to send to <span class="font-bold">hello@aarkinn.com</span>...
+</div>
+<div class="flex items-center justify-center gap-6 pt-3 text-outline font-label-code text-[11px]">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-primary">lock</span> Strict NDA Pre-executed</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-primary">verified_user</span> SOC2 &amp; ISO27001 Aligned</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- CORPORATE FOOTER (Shared Component Anchor) -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 w-full">
+<div class="w-full max-w-7xl mx-auto px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<!-- Col 1: Brand -->
+<div class="md:col-span-1">
+<div class="flex items-center gap-2.5 mb-3">
+<div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary-container to-tertiary-container flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-surface-container-lowest rounded-[6px] flex items-center justify-center">
+<span class="text-primary font-bold text-xs">A</span>
+</div>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">AARK Innovations</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Institutional technology advisory &amp; engineering practice serving the C-suite across North America and the Carolinas corridor.
+          </p>
+<div class="flex items-center gap-2 text-outline font-label-code text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Fort Mill, SC · Charlotte, NC</span>
+</div>
+</div>
+<!-- Col 2: Practices -->
+<div>
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-4 font-semibold">Practices</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#practices">Oracle ERP Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#practices">Data &amp; AI Transformation</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#practices">Cloud &amp; Infrastructure</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#practices">Databricks Lakehouse Ops</a></li>
+</ul>
+</div>
+<!-- Col 3: Engagement & Proof -->
+<div>
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-4 font-semibold">Advisory &amp; Impact</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#engagement">Engagement Models</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#roi-impact">ROI Calculator</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#consultation">Executive Briefing</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#ecosystem">Partner Ecosystem</a></li>
+</ul>
+</div>
+<!-- Col 4: Compliance Badges -->
+<div>
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-4 font-semibold">Enterprise Governance</h4>
+<div class="space-y-2.5">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/50 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-code text-[11px] text-on-surface">SOC 2 Type II Certified Practices</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/50 border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary text-[18px]">security</span>
+<span class="font-label-code text-[11px] text-on-surface">ISO 27001 Security Framework</span>
+</div>
+</div>
+<div class="mt-4 flex gap-4 text-outline font-body-sm text-body-sm">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span>·</span>
+<a class="hover:text-primary transition-colors" href="#">Security Compliance</a>
+</div>
+</div>
+</div>
+<!-- Copyright & Bottom Line -->
+<div class="pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2025 AARK Innovations Inc. All rights reserved. Fort Mill, SC · Charlotte &amp; Carolinas. Enterprise AI &amp; Cloud Advisory.
+        </p>
+<div class="flex items-center gap-4 text-outline font-label-code text-[11px]">
+<span class="inline-flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Production System Operational</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Vanilla JS Interactive ROI & FAQ Accordion -->
+<script>
+    // FAQ Accordion Toggle
+    function toggleFaq(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        icon.textContent = 'expand_less';
+      } else {
+        el.classList.add('hidden');
+        icon.textContent = 'expand_more';
+      }
+    }
+
+    // Dynamic Reactive ROI Calculator
+    const teamSizeInput = document.getElementById('team-size');
+    const hoursLostInput = document.getElementById('hours-lost');
+    const hourlyCostInput = document.getElementById('hourly-cost');
+
+    const valTeamSize = document.getElementById('val-team-size');
+    const valHoursLost = document.getElementById('val-hours-lost');
+    const valHourlyCost = document.getElementById('val-hourly-cost');
+
+    const displayCostSaved = document.getElementById('display-cost-saved');
+    const displayHoursSaved = document.getElementById('display-hours-saved');
+    const displayPayback = document.getElementById('display-payback');
+
+    function calculateROI() {
+      const teams = parseInt(teamSizeInput.value, 10);
+      const hours = parseInt(hoursLostInput.value, 10);
+      const rate = parseInt(hourlyCostInput.value, 10);
+
+      // Label updates
+      valTeamSize.textContent = `${teams} professionals`;
+      valHoursLost.textContent = `${hours} hrs / week`;
+      valHourlyCost.textContent = `$${rate} / hr`;
+
+      // Conservative 50-week year calculation
+      // Automation captures ~65% of lost manual time
+      const totalLostHours = teams * hours * 50;
+      const reclaimedHours = Math.round(totalLostHours * 0.65);
+      const costRecoverable = Math.round(reclaimedHours * rate);
+
+      // Format currency
+      displayCostSaved.textContent = '$' + costRecoverable.toLocaleString();
+      displayHoursSaved.textContent = reclaimedHours.toLocaleString() + ' hrs/yr';
+
+      // Payback calculation
+      if (costRecoverable > 800000) {
+        displayPayback.textContent = '< 30 Days';
+      } else if (costRecoverable > 350000) {
+        displayPayback.textContent = '< 60 Days';
+      } else {
+        displayPayback.textContent = '< 90 Days';
+      }
+    }
+
+    teamSizeInput.addEventListener('input', calculateROI);
+    hoursLostInput.addEventListener('input', calculateROI);
+    hourlyCostInput.addEventListener('input', calculateROI);
+
+    // Initial calculation trigger
+    calculateROI();
+
+    // Consultation Form Mailto Submission
+    const form = document.getElementById('consultation-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('form-name').value;
+        const email = document.getElementById('form-email').value;
+        const company = document.getElementById('form-company').value;
+        const focus = document.getElementById('form-focus').value;
+        const message = document.getElementById('form-message').value;
+
+        const subject = encodeURIComponent(`Executive Consultation Inquiry: ${name} (${company})`);
+        const body = encodeURIComponent(
+          `Name: ${name}\n` +
+          `Email: ${email}\n` +
+          `Company: ${company}\n` +
+          `Primary Modernization Focus: ${focus}\n\n` +
+          `Challenge / Timeline Overview:\n${message}\n\n` +
+          `---\nInquiry generated from AARK Innovations Executive Portal`
+        );
+
+        const toast = document.getElementById('form-toast');
+        if (toast) {
+          toast.classList.remove('hidden');
+        }
+
+        setTimeout(() => {
+          window.location.href = `mailto:hello@aarkinn.com?subject=${subject}&body=${body}`;
+        }, 600);
+      });
+    }
+  </script>
+</body></html>
