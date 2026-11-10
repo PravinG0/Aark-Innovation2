@@ -261,6 +261,43 @@
       box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
     }
 
+    /* Top Bar & Footer: always deep obsidian/dark slate across both light and dark themes */
+    footer,
+    .bg-slate-950 {
+      background-color: #080D1A !important;
+    }
+    html.dark footer,
+    html.dark .bg-slate-950 {
+      background-color: #050811 !important;
+      border-color: #1E293B !important;
+    }
+    footer h4 {
+      color: #F1F5F9 !important;
+    }
+    footer a {
+      color: #94A3B8;
+      transition: color 0.15s ease;
+    }
+    footer a:hover {
+      color: #FFFFFF !important;
+    }
+    footer .text-white {
+      color: #FFFFFF !important;
+    }
+    footer .text-slate-400 {
+      color: #94A3B8 !important;
+    }
+    footer .text-slate-300 {
+      color: #CBD5E1 !important;
+    }
+    footer .text-slate-200 {
+      color: #E2E8F0 !important;
+    }
+    footer .bg-slate-800 {
+      background-color: #111827 !important;
+      border-color: #1E293B !important;
+    }
+
     /* SVG Dark Mode Overrides */
     html.dark #mesh-grid path {
       stroke: #162032;
@@ -321,7 +358,7 @@
 <body class="bg-brand-canvas text-brand-ink font-sans antialiased selection:bg-brand-blue selection:text-white">
 
   <!-- Top Regional Authority Bar -->
-  <div class="bg-brand-ink text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+  <div class="bg-slate-950 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -1733,7 +1770,7 @@
   </main>
 
   <!-- Corporate Footer -->
-  <footer class="bg-brand-ink text-slate-300 py-16 border-t border-slate-800">
+  <footer class="bg-slate-950 text-slate-300 py-16 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="md:col-span-1">
